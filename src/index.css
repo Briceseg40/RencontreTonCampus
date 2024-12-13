@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: #B08282;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 0 2px black;
+}
+
+nav img {
+    margin-left: 15px;
+    height: 50px;
+    width: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 15px;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    background-color: rgba(0, 0, 0, 10%);
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+#btn-inscription {
+    border: 2px solid black;
+}
+
+nav ul li a:hover {
+    background-color: black;
+    color: white;
+}
+
+/*Hero*/
+
+.hero {
+    background-color: rgba(202, 161, 161, 70%);
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 35px;
+    margin: 0;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.hero .container-presentation {
+    margin: 0 auto;
+    display: flex;
+    margin-top: 55px;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 55px;
+
+}
+
+.hero .container-presentation .profil {
+    position: relative;
+    height: 100%;
+
+}
+
+.hero .container-presentation .profil p {
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 60%);
+}
+
+.hero .btn-profil {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+.hero .btn-profil:hover {
+    background-color: transparent;
+    color: black;
+}
+
+@media (max-width: 1100px) {
+    .hero .container-presentation .profil {
+        position: relative;
+        height: 60%;
+        
+    
+    }
+    .hero .container-presentation {
+        height: 100%;
+    }
+    .hero .container-presentation .profil img {
+        height: 100%;
+    }
+    
+}
