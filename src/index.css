@@ -1,7 +1,23 @@
 body {
     margin: 0;
 }
+@font-face {
+    font-family: 'InkFree';
+    src: url('../fonts/Ink-Free.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url('../fonts/BAHNSCHRIFT.TTF') format('truetype');
+}
 
+h1 {
+    margin: 0;
+    font-size: 45px;
+    font-family: 'InkFree';
+}
+p {
+    font-family: 'Bahnschrift';
+}
 nav {
     background-color: #B08282;
     padding: 5px;
@@ -57,7 +73,6 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 35px;
     margin: 0;
     text-align: center;
     padding-top: 5%;
@@ -119,4 +134,49 @@ nav ul li a:hover {
         height: 100%;
     }
     
+}
+
+/*Page connexion de compte ou inscription */
+
+header {
+    background-color: #B08282;
+}
+.hero-connexion {
+    background-color: rgba(202, 161, 161, 70%);
+    height: 95vh;
+    text-align: center;
+}
+.hero-connexion h1 {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+}
+
+form {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-connexion form input, .hero-connexion form button {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.hero-connexion form #btn-inscription{
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    font-size: 15px;
+}
+.hero-connexion img {
+position: absolute;
+right: 0;
+height: 90%; 
+width: 1200px;
 }
