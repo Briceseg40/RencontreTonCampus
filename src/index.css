@@ -29,10 +29,33 @@ nav {
 
 nav img {
     margin-left: 15px;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
+}
+nav .logo-lien {
+    display: flex;
+    align-items: center;
 }
 
+nav .logo-lien ul li a {
+    color: black;
+}
+
+nav .logo-lien ul li a:hover {
+    text-decoration: underline;
+}
+nav #lien-profil {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+
+}
+
+nav #lien-profil:hover {
+    background-color: white;
+    color: black;
+
+}
 nav ul {
     display: flex;
     list-style-type: none;
@@ -44,24 +67,16 @@ nav ul li {
 }
 
 nav ul li a {
-    background-color: rgba(0, 0, 0, 10%);
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
-    color: black;
-    border-radius: 5px;
-    padding: 5px;
+    border-radius: 20px;
+    padding: 10px;
 
 }
 
 #btn-inscription {
     border: 2px solid black;
 }
-
-nav ul li a:hover {
-    background-color: black;
-    color: white;
-}
-
 /*Hero*/
 
 .hero {
