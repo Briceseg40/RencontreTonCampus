@@ -41,7 +41,7 @@ a {
     margin: 0 auto;
 }
 
-nav {
+header {
     background-color: #B08282;
     padding: 5px;
     display: flex;
@@ -50,27 +50,27 @@ nav {
     box-shadow: 2px 0 2px black;
 }
 
-nav img {
+header img {
     margin-left: 15px;
     height: 60px;
     width: 60px;
 }
 
-nav .logo-lien {
+header .logo-lien {
     display: flex;
     align-items: center;
 }
 
-nav .logo-lien ul li a {
+header .logo-lien ul li a {
     color: black;
 
 }
 
-nav .logo-lien ul li a:hover {
+header .logo-lien ul li a:hover {
     text-decoration: underline;
 }
 
-nav #lien-profil {
+header #lien-profil {
     display: inline-flex;
     align-items: center;
     background-color: black;
@@ -80,25 +80,25 @@ nav #lien-profil {
     text-decoration: none;
 }
 
-nav #lien-profil:hover {
+header #lien-profil:hover {
     background-color: #333;
 }
 
-nav #lien-profil i {
+header #lien-profil i {
     margin-right: 8px;
 }
 
-nav ul {
+header ul {
     display: flex;
     list-style-type: none;
     margin-right: 15px;
 }
 
-nav ul li {
+header ul li {
     margin-right: 10px;
 }
 
-nav ul li a {
+header ul li a {
     font-size: 25px;
     text-decoration: none;
     border-radius: 20px;
@@ -478,6 +478,11 @@ footer {
 }
 
 /*Footer*/
+
+.title-footer {
+    font-size: 18px;
+    font-weight: bolder;
+}
 footer {
     background-color: #FDF4F2;
     padding: 40px 20px;
