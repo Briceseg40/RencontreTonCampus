@@ -42,14 +42,11 @@ a {
 }
 
 header {
-    background-color:black;
-    background-color: #B08282;
-    padding: 5px;
-
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 10px 10px 10px black;
+    z-index: -1;
 }
 
 header img {
@@ -65,13 +62,29 @@ header .logo-lien {
     align-items: center;
 }
 
-header .logo-lien ul li a {
-    color: white;
-    color: black;
+header .logo-lien ul {
+    display: flex;
 }
 
-header .logo-lien ul li a:hover {
-    text-decoration: underline;
+header .logo-lien ul li a {
+    color: white;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+header .logo-lien ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 0;
+    background-color: #FD9BC2;
+    transition: width 0.3s ease;
+}
+
+header .logo-lien ul li a:hover::before {
+    width: 100%;
 }
 
 header #lien-profil {
@@ -86,16 +99,9 @@ header #lien-profil:hover {
     background-color: #333;
 }
 
-<<<<<<< HEAD
 header ul li a i {
     color: white;
 }
-=======
-header #lien-profil i {
-    margin-right: 8px;
-}
-
->>>>>>> 59530aedfbcb95525f0a8d365f474f5fc3bc8b8b
 header ul {
     display: flex;
     list-style-type: none;
@@ -111,9 +117,7 @@ header ul li a {
     text-decoration: none;
     border-radius: 20px;
     padding: 10px;
-
 }
-
 #btn-inscription {
     border: 2px solid black;
 }
@@ -197,7 +201,7 @@ header ul li a {
 /*Informations secondaires*/
 .infos-rencontres {
     position: relative;
-    background-color: #CAA1A1;
+    background-color: #FDF4F2;
     padding: 3%;
 }
 
@@ -222,7 +226,7 @@ header ul li a {
     width: fit-content;
     margin: 0 auto;
     padding: 10px 35px;
-    background-color: white;
+    background-color: #FD9BC2;
     color: black;
     border-radius: 20px;
     text-decoration: none;
@@ -237,11 +241,11 @@ header ul li a {
 
 /* Infos secondaires de la roulette*/
 .match-infos {
-    background-color: #FDF4F2;
+    background-color: #FD9BC2;
 }
 
 .match-infos .bloc-infos-rencontres .bloc-infos-texte a {
-    background-color: #B08282;
+    background-color: #FDF4F2;
 }
 
 .roulette-infos h2 {
@@ -446,24 +450,28 @@ footer {
     margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
+/*Footer*/
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .logo img {
     height: 40px;
     margin-right: 10px;
-=======
-/*Footer*/
-
-.title-footer {
-    font-size: 18px;
-    font-weight: bolder;
-}
-footer {
-    background-color: #FDF4F2;
-    padding: 40px 20px;
-    /* Espace autour du contenu */
-    color: #333;
-    /* Couleur du texte foncée */
->>>>>>> 59530aedfbcb95525f0a8d365f474f5fc3bc8b8b
 }
 
 .logo span {
@@ -525,6 +533,9 @@ footer {
     margin-top: 20px;
 }
 
+.social a i {
+    font-size: 25px;
+}
 .social a {
     color: #fff;
     margin-left: 10px;
@@ -536,7 +547,7 @@ footer {
 }
 
 .copyright {
-    font-size: 0.5em;
+    font-size: 0.7em;
     margin-top: 20px;
     border-top: 1px solid #fff;
     padding-top: 20px;
@@ -550,10 +561,6 @@ footer {
     clear: both;
 }
 
-.social a i {
-    color: white;
-}
-
-.social a i:hover {
-    color: gray;
+footer .container .social a i:hover {
+    color: #FD9BC2;
 }
