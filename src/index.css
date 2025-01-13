@@ -42,12 +42,13 @@ a {
 }
 
 nav {
-    background-color: #B08282;
+    background-color: #FD8CB7;
     padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 2px 0 2px black;
+    border-bottom: 2px solid black;
+    box-shadow: 10px 10px 10px black;
 }
 
 nav img {
@@ -113,7 +114,8 @@ nav ul li a {
 /*Hero*/
 
 .hero {
-    background-color: #FDF4F2;
+    background-image: url('../img/chelou2.png');
+    background-size: cover;
     height: 100vh;
     text-align: center;
     width: 100%;
@@ -229,10 +231,6 @@ nav ul li a {
 /* Infos secondaires de la roulette*/
 .match-infos {
     background-color: #FDF4F2;
-}
-
-.match-infos h2 {
-    text-align: right;
 }
 
 .match-infos .bloc-infos-rencontres .bloc-infos-texte a {
