@@ -14,7 +14,7 @@ body {
 
 h1 {
     margin: 0;
-    font-size: 45px;
+    font-size: 65px;
     font-family: 'InkFree';
 }
 
@@ -72,7 +72,7 @@ header .logo-lien ul li a {
     transition: color 0.3s ease;
 }
 
-header .logo-lien ul li a::before {
+.class-hover-lien::before {
     content: '';
     position: absolute;
     top: 0;
@@ -83,22 +83,20 @@ header .logo-lien ul li a::before {
     transition: width 0.3s ease;
 }
 
-header .logo-lien ul li a:hover::before {
+.class-hover-lien:hover::before {
     width: 100%;
 }
 
 header #lien-profil {
     display: inline-flex;
     align-items: center;
-    padding: 15px;
-    border-radius: 50%;
     text-decoration: none;
 }
 
-header #lien-profil:hover {
-    background-color: #333;
-}
+header #lien-profil i:hover {
+    color: #FD9BC2;
 
+}
 header ul li a i {
     color: white;
 }
@@ -125,34 +123,50 @@ header ul li a {
 /*Hero*/
 
 .hero {
+    position: relative; /* Essentiel pour le pseudo-élément */
     background-image: url('../img/floup.png');
     background-size: cover;
-    height: 100vh;
     text-align: center;
     width: 100%;
+    color: white; /* Important pour que le texte soit visible */
+    padding-bottom: 100px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0; 
 }
 
 .hero h1 {
     margin: 0;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 2%;
+    position: relative; 
+    z-index: 1; 
+    color: white;
 }
 
 .hero .container-presentation {
     margin: 0 auto;
     display: flex;
     margin-top: 55px;
-    width: 50%;
+    width: 60%;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 55px;
-
+    margin-bottom: 45px;
+    position: relative; 
+    z-index: 1; 
 }
 
 .hero .container-presentation .profil {
     position: relative;
     height: 100%;
-
 }
 
 .hero .container-presentation .profil p {
@@ -173,10 +187,12 @@ header ul li a {
     border-radius: 10px;
     font-size: 20px;
     border: 2px solid black;
+    position: relative; /* Indispensable pour que le bouton soit au-dessus */
+    z-index: 1; /* Mettre le bouton au-dessus du pseudo-élément */
 }
 
 .hero .btn-profil:hover {
-    background-color: transparent;
+    background-color: #FD9BC2;
     color: black;
 }
 
@@ -230,8 +246,13 @@ header ul li a {
     color: black;
     border-radius: 20px;
     text-decoration: none;
-}
+    border: 2px solid transparent;
 
+}
+.infos-rencontres .bloc-infos-rencontres .bloc-infos-texte a:hover {
+    background-color: white;
+    border: 2px solid black;
+}
 .infos-rencontres .bloc-infos-rencontres img {
     width: 100%;
     height: 500px;
@@ -246,6 +267,13 @@ header ul li a {
 
 .match-infos .bloc-infos-rencontres .bloc-infos-texte a {
     background-color: #FDF4F2;
+    border: 2px solid transparent;
+
+}
+.match-infos .bloc-infos-rencontres .bloc-infos-texte a:hover {
+    background-color: #FD9BC2;
+    border: 2px solid white;
+
 }
 
 .roulette-infos h2 {
@@ -463,36 +491,6 @@ footer {
     margin: 0 auto;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.logo img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-.logo span {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.location {
-    display: flex;
-    align-items: center;
-    float: right;
-    border: 1px solid white;
-    border-radius: 20px;
-    padding: 5px 10px;
-}
-
-.location img {
-    height: 15px;
-    margin-right: 5px;
-}
-
 .links {
     display: flex;
     justify-content: space-between;
@@ -506,7 +504,7 @@ footer {
 }
 
 .links h4 {
-    font-size: 0.9em;
+    font-size: 23px;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -515,13 +513,13 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
+    font-size: 22px;
 }
 
-.links li {
-    margin-bottom: 5px;
-}
+
 
 .links a {
+    position: relative;
     color: #fff;
     text-decoration: none;
     font-size: 0.8em;
@@ -530,7 +528,6 @@ footer {
 .social {
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
 }
 
 .social a i {
@@ -551,7 +548,9 @@ footer {
     margin-top: 20px;
     border-top: 1px solid #fff;
     padding-top: 20px;
-}
+    display: flex;
+text-align: center;
+justify-content: space-between;}
 
 .copyright p {
     margin: 0;
