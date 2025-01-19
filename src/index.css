@@ -1,6 +1,24 @@
 body {
     margin: 0;
 }
+/*Background commun*/
+main, .container-connexion {
+    background-image: url('../../img/floup.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    position: relative;
+}
+.container-connexion::before, main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
 
 @font-face {
     font-family: 'InkFree';
@@ -19,6 +37,7 @@ h1 {
 }
 
 h2 {
+    font-family: 'Bahnschrift';
     margin: 0;
     font-size: 35px;
 }
@@ -27,7 +46,10 @@ p {
     font-size: 20px;
     font-family: 'Bahnschrift';
 }
+ul {
+    font-family: 'Bahnschrift';
 
+}
 a {
     font-size: 20px;
 }
@@ -40,28 +62,38 @@ a {
     width: 70%;
     margin: 0 auto;
 }
+/*Page Evenements */
+
 
 /* Page Assistance*/
-.contact-page {
+.contact-page, .evenement-page {
+    background-image: url('../img/floup.png');
     padding-top: 80px;
     padding-bottom: 50px;
-    background-color: #fdf4f2;
     color: #333;
 }
 
-.contact-container {
+.contact-container, .evenement-container {
+    border-radius: 20px;
+    background-color: white;
     position: relative;
     text-align: center;
     padding: 20px;
-    width: 80%; 
+    width: 60%; 
     max-width: 80%;
 }
 
-.contact-container h1 {
+.contact-container h1, .evenement-container h1 {
     margin-bottom: 20px;
     color: #FD9BC2;
 }
-
+.evenement-container ul li{
+    list-style-type:none;
+    
+}
+.checkbox-container input {
+    margin-bottom: 20px;
+}
 #contact-form {
     display: flex;
     margin-top: 70px;
@@ -85,6 +117,7 @@ a {
 
 .form-group input,
 .form-group textarea {
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
@@ -402,16 +435,18 @@ header ul li a {
 
 
 /*Page connexion de compte ou inscription par Nasrallah Talmani*/
-.login-page {
+.container-connexion {
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #fdf4f2;
+    padding: 200px 0;
+    background-color: #FDF4F2;
 }
 
 
-.questionnaire-section {
+.container-connexion form {
+    z-index: 1;
   padding: 20px; /* Adjusted padding */
   border-radius: 10px;
   width: 350px; /* Adjusted width */
@@ -429,8 +464,8 @@ header ul li a {
   font-size: 13px;
 }
 
-input[type="text"],
-input[type="password"] {
+.question-group input[type="text"],.question-group input[type="email"],
+.question-group input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 0;
@@ -442,17 +477,21 @@ input[type="password"] {
   background-color: transparent;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
-  outline: none;
+.question-group input[type="text"]:focus,
+.question-group input[type="password"]:focus {
   border-bottom: 2px solid #000;
 }
 
-.button-container {
+.container-connexion form .button-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
 }
-
+.container-connexion form .button-container a {
+    font-size: 15px;
+    margin-top: 10px;
+}
 .login-page .button-container button {
   background-color: #ff6b81;
   color: white;
@@ -492,7 +531,7 @@ input[type="password"]:focus {
   align-items: center;
 }
 
-.questionnaire-section {
+.left-section form {
   padding: 15px 20px 20px 20px;
   border-radius: 10px;
   width: 330px;
@@ -525,8 +564,8 @@ input[type="password"]:focus {
   font-size: 13px;
 }
 
-input[type="text"],
-textarea {
+.question-group input[type="text"],
+.question-group textarea {
   width: 285px;
   padding: 5px;
   margin-bottom: 8px;
@@ -688,8 +727,8 @@ section{
   font-size: 13px;
 }
 
-input[type="text"],
-textarea, input[type="file"] {
+.question-group-form2 input[type="text"],
+.question-group-form2 textarea, .question-group-form2 input[type="file"] {
   width: 285px;
   padding: 5px;
   margin-bottom: 8px;
@@ -860,10 +899,11 @@ button {
     padding-bottom: 50px;
     background-color: #fdf4f2;
     color: #333;
-    min-height: 100vh;
 }
 
 .message-container {
+    position: relative;
+    z-index: 1;
     text-align: center;
     padding: 20px;
     display: flex;
@@ -960,6 +1000,7 @@ button {
  }
 .actions-dropdown {
     position: absolute;
+    color: black;
     top: 100%;
     right: 0;
     background-color: white;
@@ -971,6 +1012,7 @@ button {
 
 .actions-dropdown button {
     padding: 10px 20px;
+    color: black;
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -1045,7 +1087,6 @@ button {
 /*Page Swipe */
 .swipe-page {
     padding-top: 80px;
-    padding-bottom: 50px;
     background-color: #fdf4f2;
     color: #333;
     position: relative;
@@ -1090,7 +1131,6 @@ button {
     object-fit: cover;
 }
 .image-button {
-    background-color: transparent;
     border: none;
     cursor: pointer;
     font-size: 30px;
@@ -1122,28 +1162,33 @@ button {
 }
 
 .swipe-button {
-    background-color: transparent;
-    border: none;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50%;
     cursor: pointer;
     font-size: 40px;
 }
 
 .like-button i {
-    color: #11FF37;
+    color: #008000;
     transition: all 0.3s ease;
 }
 
 .dislike-button i {
-    color: #ff0000;
+    width: 40px;
+    height: 40px;
+    color: #8b0000;
+
     transition: all 0.3s ease;
 }
 
 .like-button i:hover {
-    color: #008000;
+    color: #11FF37;
+
 }
 
 .dislike-button i:hover {
-    color: #8b0000;
+    color: #ff0000;
 }
 
 .match-message {
@@ -1187,14 +1232,25 @@ button {
 
 
 /*La Roulette par Jon Henry */
-main {
-    margin: 0 auto;
+
+.main-wheel {
+    margin: 0 auto ;
+    padding-bottom: 40px;
+     
+}
+
+.main-wheel {
+    position: relative;
+    z-index: 1;
+
 }
 
 .wheel-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
     width: 500px;
     height: 500px;
-    margin: 100px auto;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -1215,8 +1271,6 @@ main {
     position: relative;
     transition: transform 5s ease-out;
 }
-
-
 .wheel {
     transition: transform 0.5s ease-out;
 }
@@ -1277,6 +1331,8 @@ main {
 }
 
 .spin-button {
+    position: relative;
+    z-index: 2;
     margin-top: 40px;
     background-color: #000;
     color: #FFF;
@@ -1287,8 +1343,6 @@ main {
     font-weight: bold;
     cursor: pointer;
 }
-
-
 /*Footer*/
 
 footer {
