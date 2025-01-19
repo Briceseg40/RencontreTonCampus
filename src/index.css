@@ -1000,6 +1000,7 @@ button {
  }
 .actions-dropdown {
     position: absolute;
+    color: black;
     top: 100%;
     right: 0;
     background-color: white;
@@ -1011,6 +1012,7 @@ button {
 
 .actions-dropdown button {
     padding: 10px 20px;
+    color: black;
     cursor: pointer;
     border: none;
     background-color: transparent;
