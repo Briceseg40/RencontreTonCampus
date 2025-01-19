@@ -3,38 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/0fbb9c4122.js" crossorigin="anonymous"></script>
-    <title>Rencontre ton campus</title>
-
+    <title>Page de connexion</title>
     <link rel="stylesheet" href="../../src/index.css">
 </head>
 <body>
     <header>
         <div class="logo-lien">
             <a href="../Accueil/accueil.html"><img src="../../img/LOGO.png" alt="Logo Rencontre ton campus"></a>
-            <ul>
-                <li><a class="class-hover-lien" href="../Accueil/">Évenements</a></li>
-                <li><a class="class-hover-lien" href="/">Messagerie</a></li>
+             <ul>
+                <li><a class="class-hover-lien" href="../evenement/evenement.html">Évenements</a></li>
                 <li><a class="class-hover-lien" href="../Roulette/roulette.html">Roulette</a></li>
-                <li><a class="class-hover-lien" href="/">F.A.Q</a></li>
+                <li><a class="class-hover-lien" href="../Swipe/swipe.html">Commencez a swiper</a></li>
                 <li><a class="class-hover-lien" href="/">Contactez-nous</a></li>
             </ul>
         </div>
         <ul>
-            <li><a id="lien-profil" class="btn-transition " href="../Creation-de-compte/connexioncompte.html"><i
+            <li><a id="lien-profil" class="btn-transition" href="../Messagerie/message.html">
+                <i class="fa-solid fa-comment"></i>
+            </a></li>
+            <li><a id="lien-profil" class="btn-transition" href="../Creation-de-compte/connexioncompte.html"><i
                         class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
-    <section class="hero-connexion">
-        <h1>Se connecter / S'inscire</h1>
-        
-            <form method="get" action="">
-                <input type="mail" name="mail" placeholder="lucas@gmail.com">
-                <input type="password" name="mdp" placeholder="********">
-                <button type="submit">Se connecter</button>
-                <button id="btn-inscription">S'inscire</button>
+    <section class="container">
+        <section class="questionnaire-section">
+            <form>
+                <section class="question-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="lucas76@gmail.com" required>
+                </section>
+                <section class="question-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" placeholder=".........." required>
+                </section>
+
+                <section class="button-container">
+                    <button type="submit">ENTRER</button>
+                </section>
             </form>
-        <img src="../../img/ordinateur.png" alt="Image d'un ordinateur">
+        </section>
     </section>
 </body>
 </html>
