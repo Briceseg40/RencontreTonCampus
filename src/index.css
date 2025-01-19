@@ -1,35 +1,7 @@
 body {
     margin: 0;
 }
-/*Background commun*/
-main, .container-connexion {
-    background-image: url('../../img/floup.png'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    position: relative;
-}
-.container-connexion::before, main::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-}
-
-@font-face {
-    font-family: 'InkFree';
-    src: url('../fonts/Ink-Free.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Bahnschrift';
-    src: url('../fonts/BAHNSCHRIFT.TTF') format('truetype');
-}
-
+/*Style Global du style */
 h1 {
     margin: 0;
     font-size: 65px;
@@ -42,16 +14,12 @@ h2 {
     font-size: 35px;
 }
 
-p {
+p, a {
     font-size: 20px;
     font-family: 'Bahnschrift';
 }
 ul {
     font-family: 'Bahnschrift';
-
-}
-a {
-    font-size: 20px;
 }
 
 .btn-transition {
@@ -62,111 +30,53 @@ a {
     width: 70%;
     margin: 0 auto;
 }
-/*Page Evenements */
 
-
-/* Page Assistance*/
-.contact-page, .evenement-page {
-    background-image: url('../img/floup.png');
-    padding-top: 80px;
-    padding-bottom: 50px;
-    color: #333;
+@font-face {
+    font-family: 'InkFree';
+    src: url('../fonts/Ink-Free.ttf') format('truetype');
 }
 
-.contact-container, .evenement-container {
-    border-radius: 20px;
-    background-color: white;
-    position: relative;
-    text-align: center;
-    padding: 20px;
-    width: 60%; 
-    max-width: 80%;
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url('../fonts/BAHNSCHRIFT.TTF') format('truetype');
 }
 
-.contact-container h1, .evenement-container h1 {
-    margin-bottom: 20px;
-    color: #FD9BC2;
-}
-.evenement-container ul li{
-    list-style-type:none;
-    
-}
-.checkbox-container input {
-    margin-bottom: 20px;
-}
-#contact-form {
-    display: flex;
-    margin-top: 70px;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.form-group {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    margin-bottom: 5px;
-    text-align: left;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #FD9BC2;
-    box-shadow: 0 0 5px rgba(253, 155, 194, 0.5); /* Couleur #FD9BC2 */
-}
-
-
-#contact-form button[type="submit"] {
-    background-color: #FD9BC2;
+button {
+    background-color: #ff6b81;
     color: white;
+    padding: 8px 18px;
     border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-     margin-top: 20px;
-}
-
-#contact-form button[type="submit"]:hover {
-      background-color: #f27ca8;
-}
-.confirmation-message {
-    background-color: #11FF37;
-    color: #000000;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
+    font-size: 14px;
+  }
+input:focus, textarea:focus {
+      outline: none;
+      border-color: #FD9BC2;
+      box-shadow: 0 0 5px #FD9BC2; 
+  }
+/*Background commun*/
+main, .container-connexion, .container-questions1 {
+    background-image: url('../../img/floup.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
     position: relative;
-     display: none;
 }
-.hidden{
-    display: none;
+.container-connexion::before, main::before, .container-questions1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
-@media (max-width: 768px) {
-     .contact-container {
-        width: 95%;
-    }
-    .form-group {
-          width: 90%;
-    }
 
-}
+/* */
+
+
 /* Page d'accueil*/
 header {
     background-color: black;
@@ -323,24 +233,6 @@ header ul li a {
     color: black;
 }
 
-@media (max-width: 1100px) {
-    .hero .container-presentation .profil {
-        position: relative;
-        height: 60%;
-
-
-    }
-
-    .hero .container-presentation {
-        height: 100%;
-    }
-
-    .hero .container-presentation .profil img {
-        height: 100%;
-    }
-
-}
-
 /*Informations secondaires*/
 .infos-rencontres {
     position: relative;
@@ -407,32 +299,75 @@ header ul li a {
     text-align: left;
 }
 
+/* Page Assistance / Page Evenements les deux pages sont trés similaire et le css de même */
+.contact-page, .evenement-page {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
 
+.contact-container, .evenement-container {
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    width: 60%; 
+    max-width: 80%;
+}
 
+.contact-container h1, .evenement-container h1 {
+    margin-bottom: 20px;
+    color: #FD9BC2;
+}
+.evenement-container ul li{
+    list-style-type:none;
+}
+.checkbox-container input {
+    margin-bottom: 20px;
+}
+#contact-form {
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
+.form-group {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
 
+.form-group label {
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+}
 
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
 
+#contact-form button[type="submit"] {
+    background-color: #FD9BC2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+     margin-top: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#contact-form button[type="submit"]:hover {
+      background-color: #f27ca8;
+}
 
 /*Page connexion de compte ou inscription par Nasrallah Talmani*/
 .container-connexion {
@@ -483,11 +418,6 @@ header ul li a {
   background-color: transparent;
 }
 
-.question-group input[type="text"]:focus,
-.question-group input[type="password"]:focus {
-  border-bottom: 2px solid #000;
-}
-
 .container-connexion form .button-container {
   text-align: center;
   display: flex;
@@ -509,7 +439,7 @@ header ul li a {
   width: 100%;
 }
 /*Questions1 */
-.container {
+.container-questions1 {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -518,20 +448,17 @@ header ul li a {
 }
 
 .left-section {
-    padding: 60px 0;
-
+    z-index: 1;
+padding: 60px 0;
   width: 50%;
-  background-color: #f2d7d9;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .right-section {
-    padding: 60px 0;
-
+  padding: 60px 0;
   width: 50%;
-  background-color: #ffe8eb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -607,15 +534,7 @@ textarea {
   margin-top: 5px;
 }
 
-button {
-  background-color: #ff6b81;
-  color: white;
-  padding: 8px 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
+
 
 .progress-info {
   text-align: center;
@@ -682,36 +601,7 @@ button {
     width: 100%;
     height: 100%;
 }
-.left-section-form2 {
-    width: 50%;
-    background-color: #f2d7d9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.right-section-form2 {
-    width: 50%;
-    height: 100%;
-    background-color: #ffe8eb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.questionnaire-section-form2 {
-  padding: 15px 20px 20px 20px;
-  border-radius: 10px;
-  width: 330px;
-}
 
-.profile-section-form2 {
-  padding: 15px 20px 20px 20px;
-  border-radius: 10px;
-  width: 300px;
-  text-align: center;
-  position: relative;
-  background-color: #ccc;
-}
 section{
   display: block;
   unicode-bidi: isolate;
@@ -792,15 +682,7 @@ textarea{
   margin-top: 5px;
 }
 
-button {
-  background-color: #ff6b81;
-  color: white;
-  padding: 8px 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-}
+
 
 .progress-info-form2 {
   text-align: center;
@@ -1074,21 +956,7 @@ button {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .message-container {
-        flex-direction: column; 
-        align-items: center; 
-        gap: 15px;
-    }
-    .match-list-container {
-        width: 95%;
-        max-width: none; 
-    }
-   .chat-window {
-        width: 95%;
-        height: 95%;
-    }
-}
+
 
 /*Page Swipe */
 .swipe-page {
@@ -1214,11 +1082,7 @@ button {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .profile-card {
-        width: 90%;
-    }
-}
+
 
 
 
@@ -1239,21 +1103,32 @@ button {
 
 /*Page Roulette par Jon Henry */
 
+.wheel-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
 #canvas {
     border: 5px solid #FD9BC2;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    /* Ombre plus prononcée */
+    width: 100%;
+    height: 100%;
 }
 
 #spin-wheel {
-    background-color: #e3e3e3;
+    background-color: #FD9BC2;
     font-size: 1.45em;
     height: 3em;
     width: 50%;
     max-width: 300px;
     font-style: italic;
-    color: black;
+    color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -1275,18 +1150,91 @@ button {
     font-size: 2em;
     font-weight: bold;
     color: #FD9BC2;
+    height: 2.5em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-width: 425px) {
-    #canvas {
-        width: 90vw;
-        height: 90vw;
-    }
+/* ----------- Modale ----------- */
 
-    #spin-wheel {
-        width: 80%;
-        font-size: 1.2em;
-    }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.modal-content img {
+    max-width: 250px;
+    border-radius: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#matchBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#unmatchBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* ----------- Effets visuels ----------- */
+
+.modal-green {
+    background-color: rgba(0, 128, 0, 0.7) !important;
+    transition: background-color 0.5s ease;
+}
+
+.modal-red {
+    background-color: rgba(255, 0, 0, 0.7) !important;
+    transition: background-color 0.5s ease;
 }
 
 .confetti {
@@ -1303,8 +1251,36 @@ button {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #f00;
+    background-color: #f00; 
     border-radius: 0%;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(95vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ----------- Media queries ----------- */
+
+@media (max-width: 425px) {
+    .wheel-container {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    #spin-wheel {
+        width: 80%;
+        font-size: 1.2em;
+    }
 }
 /*Footer*/
 
@@ -1392,4 +1368,60 @@ justify-content: space-between;}
 
 footer .container .social a i:hover {
     color: #FD9BC2;
+}
+
+/*Responsive*/
+/*Page d'accueil*/
+@media (max-width: 1100px) {
+    .hero .container-presentation .profil {
+        position: relative;
+        height: 60%;
+
+
+    }
+
+    .hero .container-presentation {
+        height: 100%;
+    }
+
+    .hero .container-presentation .profil img {
+        height: 100%;
+    }
+
+}
+@media (max-width: 425px) {
+    #canvas {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    #spin-wheel {
+        width: 80%;
+        font-size: 1.2em;
+    }
+}
+/*Messagerie*/
+@media (max-width: 768px) {
+    .profile-card {
+        width: 90%;
+    }
+    .message-container {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px;
+    }
+    .match-list-container {
+        width: 95%;
+        max-width: none; 
+    }
+   .chat-window {
+        width: 95%;
+        height: 95%;
+    }
+    .contact-container {
+        width: 95%;
+    }
+    .form-group {
+          width: 90%;
+    }
 }

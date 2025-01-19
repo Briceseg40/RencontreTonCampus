@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface de Questionnaire</title>
-    <link rel="stylesheet" href="questions.css">
+    <link rel="stylesheet" href="../../src/index.css">
+     <link rel="stylesheet" href="form.css">
+     <script src="https://kit.fontawesome.com/0fbb9c4122.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -25,112 +27,148 @@
                         class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
-    <div class="logo-container-form2">
-        <img src="" alt="Logo">
-    </div>
-    <div class="container-form2">
-        <section class="left-section-form2">
-            <form id="questionnaireForm">
-                <section class="question-group-form2">
-                    <label>Quels sont vos passions ?*</label>
-                    <section class="checkbox-group-form2">
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="cinema" name="passions" value="Cinéma">
-                            <label for="cinema">Cinéma</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="animaux" name="passions" value="Les animaux">
-                            <label for="animaux">Les animaux</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="sport" name="passions" value="Sport">
-                            <label for="sport">Sport</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="cuisine" name="passions" value="La cuisine">
-                            <label for="cuisine">La cuisine</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="jeux-video" name="passions" value="Jeux-vidéo">
-                            <label for="jeux-video">Jeux-vidéo</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="voyager" name="passions" value="Voyager">
-                            <label for="voyager">Voyager</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="musique" name="passions" value="Musique">
-                            <label for="musique">Musique</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="netflix" name="passions" value="Netflix">
-                            <label for="netflix">Netflix</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="coiffure" name="passions" value="Coiffure">
-                            <label for="coiffure">Coiffure</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="danse" name="passions" value="Danse">
-                            <label for="danse">Danse</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="dessiner" name="passions" value="Dessiner">
-                            <label for="dessiner">Dessiner</label>
-                        </section>
-                        <section class="checkbox-item">
-                            <input type="checkbox" id="les-photos" name="passions" value="Les photos">
-                            <label for="les-photos">Les photos</label>
-                        </section>
-                    </section>
-                    <span class="error-message-form2" id="passions-error"></span>
-                </section>
+      <main class="container-questions1">
+            <div class="left-section">
+                <form id="questionnaireForm">
+                    <div class="question">
+                        <label>Quels sont vos passions ?*</label>
+                        <div class="checkbox-group-form2">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="cinema" name="passions" value="Cinéma">
+                                <label for="cinema">Cinéma</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="animaux" name="passions" value="Les animaux">
+                                <label for="animaux">Les animaux</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sport" name="passions" value="Sport">
+                                <label for="sport">Sport</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="cuisine" name="passions" value="La cuisine">
+                                <label for="cuisine">La cuisine</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="jeux-video" name="passions" value="Jeux-vidéo">
+                                <label for="jeux-video">Jeux-vidéo</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="voyager" name="passions" value="Voyager">
+                                <label for="voyager">Voyager</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="musique" name="passions" value="Musique">
+                                <label for="musique">Musique</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="netflix" name="passions" value="Netflix">
+                                <label for="netflix">Netflix</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="coiffure" name="passions" value="Coiffure">
+                                <label for="coiffure">Coiffure</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="danse" name="passions" value="Danse">
+                                <label for="danse">Danse</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="dessiner" name="passions" value="Dessiner">
+                                <label for="dessiner">Dessiner</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="les-photos" name="passions" value="Les photos">
+                                <label for="les-photos">Les photos</label>
+                            </div>
+                        </div>
+                         <span class="error-message-form2" id="passions-error"></span>
+                    </div>
 
-                <section class="question-group-form2">
-                    <label for="citation">Quel est votre citation préférée?</label>
-                    <textarea id="citation" name="citation" placeholder="Ex: Ne jamais remettre au lendemain ce qu'on peut faire le jour même. /Sensei Wu"></textarea>
-                    <span class="error-message-form2" id="citation-error"></span>
-                </section>
+                    <div class="question-group">
+                        <label for="citation">Quel est votre citation préférée?</label>
+                        <textarea id="description" name="citation" placeholder="Ex: Ne jamais remettre au lendemain ce qu'on peut faire le jour même. /Sensei Wu"></textarea>
+                        <span class="error-message-form2" id="citation-error"></span>
+                    </div>
 
-                <section class="question-group-form2">
-                    <label for="photos">Inserez une photo de vous (Au moins 3 photos sont requises) :</label>
-                    <input type="file" id="photos" name="photos" accept="image/*" multiple>
-                    <span class="error-message-form2" id="photos-error"></span>
-                </section>
+                    <div class="question-group">
+                        <label for="photos">Inserez une photo de vous (Au moins 3 photos sont requises) :</label>
+                        <input type="file" id="photos" name="photos" accept="image/*" multiple>
+                        <span class="error-message-form2" id="photos-error"></span>
+                    </div>
 
-                <div class="button-container-form2">
-                    <button type="button" onclick="validerFormulaire()">J'ai terminé</button>
-                    <div class="progress-info-form2">2/2</div>
-                </div>
-                <div class="asterisk-info-form2">
-                    <p>* = Question obligatoire</p>
-                </div>
-            </form>
+                    <div class="button-container">
+                        <button type="button" onclick="validerFormulaire()">J'ai terminé</button>
+                    </div>
+                     <div class="asterisk-info">
+                         <p>* = Question obligatoire</p>
+                    </div>
+                </form>
+            </div>
+        
+        <section class="right-section">
+            <section class="profile-section">
+                <section class="profile-picture">
+                    <img src="../../img/alex.jpg" alt="Profile Picture">
+                </section>
+                
+                <section class="profile-info">
+                    <p><b id="profile-prenom"></b> <b id="profile-age"></b>      <b id="profile-ville"></b>, <b id="profile-taille"></b></p>
+                </section>
+                <section class="bio-container">
+                    <p><b>Biographie</b></p>
+                     <p id="profile-description"></p>
+                </section>
+                
+                <p>Statut : <span id="profile-statut"></span></p>
+                <p>Sexualité : <span id="profile-orientation"></span></p>
+                <p>Ce que je recherche : <span id="profile-recherche"></span></p>
+                  <p>Etudes : <span id="profile-etudes">BUT Informatique</span></p>
+                <p>Mes passions : <span id="profile-passions"></span></p>
+                <p>Ma citation préférée : <span id="profile-citation"></span></p>
+            </section>
         </section>
-        <section class="right-section-form2">
-            <section class="profile-picture-form2">
-              <img src="https://i.imgur.com/b0qBdRa.png" alt="Profile Picture">
-            </section>
-            <section class="profile-info">
-              <p>
-                <b id="profile-prenom"></b> <b id="profile-age"></b>     <b id="profile-ville"></b>,
-                <b id="profile-taille"></b>
-              </p>
-            </section>
-            <section class="profile-bio-form2">
-              <p><b>Biographie</b></p>
-              <p id="profile-description"></p>
-            </section>
-            <section class="profile-info-supp">
-                <p>Statut : <s id="profile-statut"></p>
-                <p>Sexualité : <s id="profile-orientation"></p>
-                <p>Ce que je recherche : <s id="profile-recherche"></p>
-                <p>Etudes : <s id="profile-etudes">BUT Informatique</p>
-                <p>Mes passions : <s id="profile-passions"></p>
-                <p>Ma citation préférée : <s id="profile-citation"></p>
-            </section>
-          </section>
-    </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="links">
+                <div>
+                    <h4>À propos de nous</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">Nos actualités</a></li>
+                        <li><a class="class-hover-lien" href="#">Histoire</a></li>
+                        <li><a class="class-hover-lien" href="#">Carrière</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Besoin d'aide ?</h4>
+                    <ul>
+                         
+                        <li><a class="class-hover-lien" href="#">Nous contacter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Utilisation</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">Conditions d'utilisation</a></li>
+                        <li><a class="class-hover-lien" href="#">Politique de Confidentialité</a></li>
+                        <li><a class="class-hover-lien" href="#">Politique d'utilisation des cookies</a></li>
+                        <li><a class="class-hover-lien" href="#">Paramètres des cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Rencontre ton campus. Tous Droits Réservés.</p>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="../../src/js/questions2.js"></script>
 </body>
 </html>

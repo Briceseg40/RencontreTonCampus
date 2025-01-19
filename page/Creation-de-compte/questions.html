@@ -27,25 +27,24 @@
         </ul>
     </header>
 
-    <section class="container">
-        <section class="left-section">
-            <section class="questionnaire-section">
+    <section class="container-questions1">
+        <div class="left-section">
                 <form id="questionnaireForm">
-                    <section class="question-group">
+                    <div class="question-group">
                         <label for="prenom">Quel est votre prénom?*</label>
                         <input type="text" id="prenom" name="prenom" placeholder="Ex: Lucas">
                         <span class="error-message" id="prenom-error"></span>
-                    </section>
+                    </div>
 
-                    <section class="question-group">
+                    <div class="question-group">
                         <label for="age">Quel âge avez-vous?*</label>
-                        <input type="text" id="age" name="age" placeholder="Ex: 1 ans">
+                        <input type="text" id="age" name="age" placeholder="Ex: 22">
                         <span class="error-message" id="age-error"></span>
-                    </section>
+                    </div>
 
-                    <section class="question-group">
+                    <div class="question-group">
                         <label>Quel statut vous décris le plus?*</label>
-                        <section class="radio-group">
+                        <div class="radio-group">
                             <input type="radio" id="celibataire" name="statut">
                             <label for="celibataire">Célibataire</label>
                             
@@ -54,38 +53,33 @@
                             
                             <input type="radio" id="complique" name="statut">
                             <label for="complique">Compliqué</label>
-                        </section>
+                        </div>
                         <span class="error-message" id="statut-error"></span>
-                    </section>
+                    </div>
 
-                    <section class="question-group">
+                    <div class="question-group">
                         <label>Que recherchez-vous ?*</label>
-                        <section class="radio-group">
+                        <div class="radio-group">
                             <input type="radio" id="amour" name="recherche">
                             <label for="amour">L'amour</label>
-                            
                             <input type="radio" id="amis" name="recherche">
                             <label for="amis">Des amis</label>
-                            
                             <input type="radio" id="rien-serieux" name="recherche">
                             <label for="rien-serieux">Rien de serieux</label>
-                        </section>
+                        </div>
                         <span class="error-message" id="recherche-error"></span>
-                    </section>
-
-                    <section class="question-group">
+                    </div>
+                    <div class="question-group">
                         <label for="ville">Où habitez-vous?</label>
                         <input type="text" id="ville" name="ville" placeholder="Ex: Bayonne">
-                    </section>
-
-                    <section class="question-group">
+                    </div>
+                    <div class="question-group">
                         <label for="taille">Quel taille faites-vous?</label>
                         <input type="text" id="taille" name="taille" placeholder="Ex: 185"> cm
-                    </section>
-
-                    <section class="question-group">
+                    </div>
+                    <div class="question-group">
                         <label>Que recherchez-vous ?*</label>
-                        <section class="radio-group">
+                        <div class="radio-group">
                             <input type="radio" id="hetero" name="orientation" >
                             <label for="hetero">Hommes</label>
                             
@@ -94,25 +88,23 @@
                             
                             <input type="radio" id="autres" name="orientation">
                             <label for="autres">Autres</label>
-                        </section>
+                        </div>
                         <span class="error-message" id="orientation-error"></span>
-                    </section>
+                    </div>
 
-                    <section class="question-group">
+                    <div class="question-group">
                         <label for="description">Comment vous décririez-vous?</label>
                         <textarea id="description" name="description" placeholder="Ex: Je suis une personne festive, qui adore le sport"></textarea>
-                    </section>
+                    </div>
 
-                    <section class="button-container">
-                        <button type="button" onclick="validerFormulaire()">Continuez ici</button>
-                        <section class="progress-info">1/</section>
-                    </section>
-                    <section class="asterisk-info">
+                    <div class="button-container">
+                        <button type="button" onclick="validerFormulaire()">Continue</button>
+                    </div>
+                    <span class="asterisk-info">
                         <p>*Question obligatoire</p>
-                    </section>
+                    </span>
                 </form>
-            </section>
-        </section>
+        </div>
         <section class="right-section">
             <section class="profile-section">
                 <section class="profile-picture">
@@ -147,7 +139,7 @@
                 <div>
                     <h4>Besoin d'aide ?</h4>
                     <ul>
-                        <li><a class="class-hover-lien" href="#">FAQ</a></li>
+                         
                         <li><a class="class-hover-lien" href="#">Nous contacter</a></li>
                     </ul>
                 </div>

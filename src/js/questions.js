@@ -24,9 +24,11 @@ function validerFormulaire() {
     // Validation du statut
     const statutRadios = document.getElementsByName('statut');
     let statutSelected = false;
+    let selectedStatutValue = null;
     for (const radio of statutRadios) {
         if (radio.checked) {
             statutSelected = true;
+               selectedStatutValue = radio.value;
             break;
         }
     }
@@ -39,9 +41,11 @@ function validerFormulaire() {
     // Validation du recherche
     const rechercheRadios = document.getElementsByName('recherche');
     let rechercheSelected = false;
+    let selectedRechercheValue = null;
     for (const radio of rechercheRadios) {
         if (radio.checked) {
             rechercheSelected = true;
+                selectedRechercheValue = radio.value;
             break;
         }
     }
@@ -54,9 +58,11 @@ function validerFormulaire() {
     // Validation de l'orientation
     const orientationRadios = document.getElementsByName('orientation');
     let orientationSelected = false;
+    let selectedOrientationValue = null;
     for (const radio of orientationRadios) {
         if (radio.checked) {
             orientationSelected = true;
+              selectedOrientationValue = radio.value;
             break;
         }
     }
@@ -71,29 +77,28 @@ function validerFormulaire() {
     if (!isValid) {
         return;
     }
-
-    // Si le formulaire est valide, on met à jour les informations du profil (comme avant)
-    document.getElementById('profile-prenom').textContent = prenom || "Lucas";
-    document.getElementById('profile-age').textContent = age || "21 ans";
-    document.getElementById('profile-ville').textContent = document.getElementById('ville').value || "Bayonne";
-    document.getElementById('profile-taille').textContent = (document.getElementById('taille').value ? document.getElementById('taille').value + "m" : "1m85");
-    document.getElementById('profile-description').textContent = document.getElementById('description').value || "Qqn de plutôt festif, qui adore le sport";
-    document.getElementById('profile-statut').textContent = getSelectedRadioLabel('statut') || "Célibataire";
-    document.getElementById('profile-orientation').textContent = getSelectedRadioLabel('orientation') || "Hétérosexuel";
-    document.getElementById('profile-recherche').textContent = getSelectedRadioLabel('recherche') || "Des amis";
-    
-
-    // Ici, vous pouvez ajouter le code pour passer à la partie 2 du formulaire
-    // Par exemple, masquer la partie 1 et afficher la partie 2
-    // alert("Passage à la partie 2 du formulaire !"); // Remplacer par votre logique de passage à la partie 2
+  
+ const formData = {
+        prenom: prenom || "Lucas",
+        age: age + " ans" || "21 ans",
+        ville: document.getElementById('ville').value || "Bayonne",
+        taille: document.getElementById('taille').value ? document.getElementById('taille').value + "cm" : "1m85",
+        description: document.getElementById('description').value || "Qqn de plutôt festif, qui adore le sport",
+        statut: selectedStatutValue || "Célibataire",
+        orientation: selectedOrientationValue || "Hétérosexuel",
+        recherche:  selectedRechercheValue || "Des amis"
+    };
+   localStorage.setItem('formData', JSON.stringify(formData));
+  // Rediriger vers la page questions2
+    window.location.href = '../../page/Creation-de-compte/questions2.html';
 }
 
 function getSelectedRadioLabel(radioGroupName) {
-    const radios = document.getElementsByName(radioGroupName);
-    for (const radio of radios) {
-        if (radio.checked) {
-            return radio.nextElementSibling.textContent;
-        }
+  const radios = document.getElementsByName(radioGroupName);
+  for (const radio of radios) {
+    if (radio.checked) {
+      return radio.nextElementSibling.textContent;
     }
-    return null;
+  }
+  return null;
 }
