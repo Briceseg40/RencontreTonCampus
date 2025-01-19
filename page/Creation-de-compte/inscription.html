@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'inscription</title>
+    <title>Page de connexion</title>
     <link rel="stylesheet" href="../../src/index.css">
 </head>
+
 <body>
     <header>
         <div class="logo-lien">
-            <a href="../Accueil/accueil.html"><img src="../../img/LOGO.png" alt="Logo Rencontre ton campus"></a>
+            <a href="../Accueil/accueil-disconnected.html"><img src="../../img/LOGO.png" alt="Logo Rencontre ton campus"></a>
             <ul>
-                <li><a class="class-hover-lien" href="../evenement/evenement.html">Évenements</a></li>
-                <li><a class="class-hover-lien" href="../Roulette/roulette.html">Roulette</a></li>
-                <li><a class="class-hover-lien" href="../Swipe/swipe.html">Commencez a swiper</a></li>
-                <li><a class="class-hover-lien" href="/">Contactez-nous</a></li>
+                <li><a class="class-hover-lien" href="../Creation-de-compte/connexioncompte.html">Évenements</a></li>
+                <li><a class="class-hover-lien" href="../Creation-de-compte/connexioncompte.html">Roulette</a></li>
+                <li><a class="class-hover-lien" href="../Creation-de-compte/connexioncompte.html">Commencez a swiper</a></li>
+                <li><a class="class-hover-lien" href="../assistance/assitance.html">Contactez-nous</a></li>
             </ul>
         </div>
         <ul>
-            <li><a id="lien-profil" class="btn-transition" href="../Messagerie/message.html">
-                <i class="fa-solid fa-comment"></i>
-            </a></li>
+            <li><a id="lien-profil" class="btn-transition" href="../Creation-de-compte/connexioncompte.html">
+                    <i class="fa-solid fa-comment"></i>
+                </a></li>
             <li><a id="lien-profil" class="btn-transition" href="../Creation-de-compte/connexioncompte.html"><i
                         class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
-    <section class="container">
+    <section class="container-connexion">
         <h1>INSCRIVEZ-VOUS DÈS MAINTENANT</h1>
-        <section class="questionnaire-section">
-            <form action="traitement_inscription.php" method="post">
-                <section class="question-group">
-                    <label for="email">Email</label>
-                    <input type="text" id="email" name="email" placeholder="votre@email.com" required>
-                </section>
-                <section class="question-group">
-                    <label for="password">Mot de passe</label>
+            <form action="questions.html">
+                <div class="question-group">
+                    <label for="email">Saisissez une adresse mail</label>
+                    <input type="email" id="email" name="email" placeholder="lucas76@gmail.com" required>
+                </div>
+                <div class="question-group">
+                    <label for="password">Choissisez un mot de passe</label>
                     <input type="password" id="password" name="password" placeholder=".........." required>
-                </section>
-                <section class="question-group">
-                    <label for="confirm_password">Confirmer le mot de passe</label>
-                    <input type="password" id="confirm_password" name="confirm_password" placeholder=".........." required>
-                </section>
-                <section class="button-container">
-                    <button type="submit">S'INSCRIRE</button>
-                </section>
+                </div>
+                <div class="question-group">
+                    <label for="password">Confirmez le mot de passe</label>
+                    <input type="password" id="password" name="password" placeholder=".........." required>
+                </div>
+
+                <div class="button-container">
+                    <button type="submit">Crééer un compte</button>
+                </div>
             </form>
-        </section>
+        
     </section>
+    <footer>
+        <div class="container">
+            <div class="links">
+                <div>
+                    <h4>À propos de nous</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">Nos actualités</a></li>
+                        <li><a class="class-hover-lien" href="#">Histoire</a></li>
+                        <li><a class="class-hover-lien" href="#">Carrière</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Besoin d'aide ?</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">FAQ</a></li>
+                        <li><a class="class-hover-lien" href="#">Nous contacter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Utilisation</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">Conditions d'utilisation</a></li>
+                        <li><a class="class-hover-lien" href="#">Politique de Confidentialité</a></li>
+                        <li><a class="class-hover-lien" href="#">Politique d'utilisation des cookies</a></li>
+                        <li><a class="class-hover-lien" href="#">Paramètres des cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Rencontre ton campus. Tous Droits Réservés.</p>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

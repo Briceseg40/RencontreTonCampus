@@ -12,11 +12,11 @@
 <body>
     <header>
         <div class="logo-lien">
-            <img src="../../img/LOGO.png" alt="Logo Rencontre ton campus">
+            <a href="../Accueil/accueil.html"><img src="../../img/LOGO.png" alt="Logo Rencontre ton campus"></a>
              <ul>
-                <li><a class="class-hover-lien" href="../../page/evenement/">Évenements</a></li>
-                <li><a class="class-hover-lien" href="../../page/Roulette/roulette.html">Roulette</a></li>
-                <li><a class="class-hover-lien" href="../../page/Swipe/swipe.html">Commencez a swiper</a></li>
+                <li><a class="class-hover-lien" href="../evenement/evenement.html">Évenements</a></li>
+                <li><a class="class-hover-lien" href="../Roulette/roulette.html">Roulette</a></li>
+                <li><a class="class-hover-lien" href="../Swipe/swipe.html">Commencez a swiper</a></li>
                 <li><a class="class-hover-lien" href="../assistance/assitance.html">Contactez-nous</a></li>
             </ul>
         </div>
@@ -24,20 +24,16 @@
             <li><a id="lien-profil" class="btn-transition" href="../Messagerie/message.html">
                 <i class="fa-solid fa-comment"></i>
             </a></li>
-            <li><a id="lien-profil" class="btn-transition" href="../Creation-de-compte/connexioncompte.html"><i
+            <li><a id="lien-profil" class="btn-transition" href="../Creation-de-compte/questions.html"><i
                         class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
-    <main class="main-wheel">
-        <div class="wheel-container">
-            <div class="wheel">
-                <div class="wheel-center">
-                    <span class="wheel-text">SPIN!</span>
-                </div>
-            </div>
-            <button class="spin-button">Je fais tourner</button>
-        </div>
-    </main>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <button id="spin-wheel"><i style="font-size:24px" class="fa fa-spin"></i> Tourner</button>
+    <div id="result"></div>
+
+    <audio id="wheel-sound"
+        src="https://tools.waytolearnx.com/themes/altum/assets/mp3/wheel-spinning.mp3"></audio>
     <footer>
         <div class="container">
             <div class="links">

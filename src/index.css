@@ -438,14 +438,20 @@ header ul li a {
 .container-connexion {
     
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
+   justify-content: center;
     align-items: center;
-    padding: 200px 0;
+    padding: 50px 0;
     background-color: #FDF4F2;
 }
 
+.container-connexion h1 {
+    color: white;
+    z-index: 1;
+}
 
 .container-connexion form {
+    margin: 150px 0;
     z-index: 1;
   padding: 20px; /* Adjusted padding */
   border-radius: 10px;
@@ -1231,117 +1237,74 @@ button {
 
 
 
-/*La Roulette par Jon Henry */
+/*Page Roulette par Jon Henry */
 
-.main-wheel {
-    margin: 0 auto ;
-    padding-bottom: 40px;
-     
-}
-
-.main-wheel {
-    position: relative;
-    z-index: 1;
-
-}
-
-.wheel-container {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.wheel {
-    width: 100%;
-    height: 100%;
-    background-image: conic-gradient(#FF0000,
-            #FF4500,
-            #DC143C,
-            #800000,
-            #483D8B,
-            #4B0082,
-            #800080,
-            #FF00FF
-        );
+#canvas {
+    border: 5px solid #FD9BC2;
     border-radius: 50%;
-    border: 3px solid black;
-    position: relative;
-    transition: transform 5s ease-out;
-}
-.wheel {
-    transition: transform 0.5s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    /* Ombre plus prononcée */
 }
 
-.wheel.spinning {
-    animation: spin 0.5s linear infinite;
-}
-
-.wheel:not(.spinning) {
-    transition: transform 5s ease-out;
-}
-
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.wheel-center {
-    width: 180px;
-    height: 180px;
-    background-color: #000080;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#spin-wheel {
+    background-color: #e3e3e3;
+    font-size: 1.45em;
+    height: 3em;
+    width: 50%;
+    max-width: 300px;
+    font-style: italic;
+    color: black;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid black;
-}
-
-.wheel-center::before {
-    content: "";
-    position: absolute;
-    width: 210px;
-    height: 210px;
-    background-color: transparent;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 0px 3px white;
-    z-index: -1;
-}
-
-.wheel-text {
-    font-size: 55px;
-    font-weight: bold;
-    color: #FFF;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-}
-
-.spin-button {
-    position: relative;
-    z-index: 2;
-    margin-top: 40px;
-    background-color: #000;
-    color: #FFF;
-    padding: 20px 40px;
+    margin-top: 20px;
     border: none;
-    border-radius: 10px;
-    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#spin-wheel:hover {
+    background-color: #d4d4d4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 2em;
     font-weight: bold;
-    cursor: pointer;
+    color: #FD9BC2;
+}
+
+@media (max-width: 425px) {
+    #canvas {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    #spin-wheel {
+        width: 80%;
+        font-size: 1.2em;
+    }
+}
+
+.confetti {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    border-radius: 0%;
 }
 /*Footer*/
 
