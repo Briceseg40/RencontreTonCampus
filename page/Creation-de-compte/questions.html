@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/0fbb9c4122.js" crossorigin="anonymous"></script>
     <title>Interface de Questionnaire</title>
-    <link rel="stylesheet" href="questions.Css">
+    <link rel="stylesheet" href="../../src/index.css">
 </head>
 <body>
-    <nav>
+    <header>
         <div class="logo-lien">
-            <img src="../../img/LOGO.png" alt="Logo Rencontre ton campus">
-            <ul>
-                <li><a href="/">Évenements</a></li>
-                <li><a href="/">Messagerie</a></li>
-                <li><a href="/">Roulette</a></li>
-                <li><a href="/">Contactez-nous</a></li>
+            <a href="../Accueil/accueil.html"><img src="../../img/LOGO.png" alt="Logo Rencontre ton campus"></a>
+             <ul>
+                <li><a class="class-hover-lien" href="../evenement/evenement.html">Évenements</a></li>
+                <li><a class="class-hover-lien" href="../Roulette/roulette.html">Roulette</a></li>
+                <li><a class="class-hover-lien" href="../Swipe/swipe.html">Commencez a swiper</a></li>
+                <li><a class="class-hover-lien" href="/">Contactez-nous</a></li>
             </ul>
         </div>
         <ul>
-            <li><a id="lien-profil" class="btn-transition " href="../Creation-de-compte/connexioncompte.html"><i
+            <li><a id="lien-profil" class="btn-transition" href="../Messagerie/message.html">
+                <i class="fa-solid fa-comment"></i>
+            </a></li>
+            <li><a id="lien-profil" class="btn-transition" href="../Creation-de-compte/connexioncompte.html"><i
                         class="fa-solid fa-user"></i></a></li>
         </ul>
-    </nav>
-    <div class="container">
+    </header>
+
+    <section class="container">
         <section class="left-section">
             <section class="questionnaire-section">
                 <form id="questionnaireForm">
@@ -83,10 +87,10 @@
                         <label>Que recherchez-vous ?*</label>
                         <section class="radio-group">
                             <input type="radio" id="hetero" name="orientation" >
-                            <label for="hetero">Hétéro</label>
+                            <label for="hetero">Hommes</label>
                             
                             <input type="radio" id="homo" name="orientation">
-                            <label for="homo">Homosexuel</label>
+                            <label for="homo">Femmes</label>
                             
                             <input type="radio" id="autres" name="orientation">
                             <label for="autres">Autres</label>
@@ -96,7 +100,7 @@
 
                     <section class="question-group">
                         <label for="description">Comment vous décririez-vous?</label>
-                        <textarea id="description" name="description" placeholder="Ex: Qqn de plutôt festif, qui adore le sport"></textarea>
+                        <textarea id="description" name="description" placeholder="Ex: Je suis une personne festive, qui adore le sport"></textarea>
                     </section>
 
                     <section class="button-container">
@@ -112,7 +116,7 @@
         <section class="right-section">
             <section class="profile-section">
                 <section class="profile-picture">
-                    <img src="https://i.imgur.com/b0qBdRa.png" alt="Profile Picture">
+                    <img src="../../img/alex.jpg" alt="Profile Picture">
                 </section>
                 
                 <section class="profile-info">
@@ -129,5 +133,45 @@
             </section>
         </section>
     </section>
+    <footer>
+        <div class="container">
+            <div class="links">
+                <div>
+                    <h4>À propos de nous</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">Nos actualités</a></li>
+                        <li><a class="class-hover-lien" href="#">Histoire</a></li>
+                        <li><a class="class-hover-lien" href="#">Carrière</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Besoin d'aide ?</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">FAQ</a></li>
+                        <li><a class="class-hover-lien" href="#">Nous contacter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Utilisation</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">Conditions d'utilisation</a></li>
+                        <li><a class="class-hover-lien" href="#">Politique de Confidentialité</a></li>
+                        <li><a class="class-hover-lien" href="#">Politique d'utilisation des cookies</a></li>
+                        <li><a class="class-hover-lien" href="#">Paramètres des cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Rencontre ton campus. Tous Droits Réservés.</p>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html> 
