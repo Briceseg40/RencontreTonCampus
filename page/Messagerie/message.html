@@ -4,21 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Événement Spécial - Rencontre ton campus</title>
+    <title>Messagerie - Rencontre ton campus</title>
     <link rel="stylesheet" href="../../src/index.css">
-    <link rel="stylesheet" href="evenement.css">
+    <link rel="stylesheet" href="message.css">
     <script src="https://kit.fontawesome.com/0fbb9c4122.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
     <header>
         <div class="logo-lien">
-            <a href="../Accueil/accueil.html"><img src="../../img/LOGO.png" alt="Logo Rencontre ton campus"></a>
+            <img src="../../img/LOGO.png" alt="Logo Rencontre ton campus">
              <ul>
-                <li><a class="class-hover-lien" href="../evenement/evenement.html">Évenements</a></li>
-                <li><a class="class-hover-lien" href="../Roulette/roulette.html">Roulette</a></li>
-                <li><a class="class-hover-lien" href="../Swipe/swipe.html">Commencez a swiper</a></li>
+                <li><a class="class-hover-lien" href="../../page/evenement/">Évenements</a></li>
+                <li><a class="class-hover-lien" href="../../page/Roulette/roulette.html">Roulette</a></li>
+                <li><a class="class-hover-lien" href="../../page/Swipe/swipe.html">Commencez a swiper</a></li>
                 <li><a class="class-hover-lien" href="../assistance/assitance.html">Contactez-nous</a></li>
             </ul>
         </div>
@@ -31,30 +30,35 @@
         </ul>
     </header>
 
-    <main class="evenement-page">
-        <section class="evenement-container center-page">
-            <h1>Événement Spécial</h1>
-            <p class="prepare-text">Restez informé(e) quand l'événement débutera !</p>
-
-            <div class="regles-container">
-                <h2 class="titre-regles">Inscription à l'événement</h2>
-                <p class="description-regles">Inscrivez-vous pour recevoir un email 10 minutes avant le début de l'événement</p>
-                <ul class="regles-list">
-                    <li>Soyez respectueux envers les autres participants.</li>
-                    <li>Toute forme de harcèlement est interdite.</li>
-                    <li>Amusez-vous et soyez ouvert aux rencontres!</li>
-                </ul>
-                <div class="checkbox-container">
-                    <input type="checkbox" id="accepterRegles">
-                    <label for="accepterRegles">J'accepte les règles</label>
+    <main class="message-page">
+        <section class="message-container center-page">
+            <div class="chat-window">
+                <div class="chat-header">
+                   <div class="profile-info">
+                        <img id="chat-profile-image" src="" alt="Profil de l'interlocuteur">
+                        <h2 id="chat-profile-name"></h2>
+                        <p id="chat-profile-age"></p>
+                   </div>
+                    <div class="actions-menu">
+                        <button id="show-actions-button">
+                            <i class="fa-solid fa-shield"></i>
+                        </button>
+                        <div id="actions-dropdown" class="actions-dropdown hidden">
+                            <button id="report-button">Signaler</button>
+                            <button id="remove-match-button">Supprimer le match</button>
+                         </div>
+                    </div>
                 </div>
-
-                <button class="btn-transition btn-participer" id="participerBtn" disabled>Je m'inscris</button>
+                <div id="chat-messages" class="chat-messages">
+                    <!-- Les messages seront chargés ici -->
+                </div>
+                 <div class="message-input">
+                   <textarea id="message-text" placeholder="Écrire un message..."></textarea>
+                    <button id="send-button">Envoyer</button>
+                  </div>
             </div>
         </section>
     </main>
-
-
     <footer>
         <div class="container">
             <div class="links">
@@ -95,7 +99,7 @@
             </div>
         </div>
     </footer>
-    <script src="../../src/js/evenement.js"></script>
+    <script src="../../src/js/message.js"></script>
 </body>
 
 </html>

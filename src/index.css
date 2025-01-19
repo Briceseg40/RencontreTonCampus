@@ -41,6 +41,99 @@ a {
     margin: 0 auto;
 }
 
+/* Page Assistance*/
+.contact-page {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-color: #fdf4f2;
+    color: #333;
+}
+
+.contact-container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    width: 80%; 
+    max-width: 80%;
+}
+
+.contact-container h1 {
+    margin-bottom: 20px;
+    color: #FD9BC2;
+}
+
+#contact-form {
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FD9BC2;
+    box-shadow: 0 0 5px rgba(253, 155, 194, 0.5); /* Couleur #FD9BC2 */
+}
+
+
+#contact-form button[type="submit"] {
+    background-color: #FD9BC2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+     margin-top: 20px;
+}
+
+#contact-form button[type="submit"]:hover {
+      background-color: #f27ca8;
+}
+.confirmation-message {
+    background-color: #11FF37;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+     display: none;
+}
+.hidden{
+    display: none;
+}
+@media (max-width: 768px) {
+     .contact-container {
+        width: 95%;
+    }
+    .form-group {
+          width: 90%;
+    }
+
+}
 /* Page d'accueil*/
 header {
     background-color: black;
@@ -295,13 +388,7 @@ header ul li a {
     left: 3%;
 }
 
-form {
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    display: flex;
-    flex-direction: column;
-}
+
 
 .hero-connexion form input,
 .hero-connexion form button {
@@ -437,7 +524,152 @@ form {
     .evenement-container h1 {
         font-size: 2.5em;
     }
+}/*Page messagerie */
+.message-page {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-color: #fdf4f2;
+    color: #333;
 }
+
+.message-container {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centrer le chat-window */
+    align-items: center;
+}
+.chat-window {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+
+}
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+.profile-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.profile-info h2 {
+    color: #FD9BC2;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+.profile-info p{
+    font-size: 0.9em;
+}
+
+.actions-menu {
+    position: relative;
+}
+.actions-menu button i {
+    color: pink;
+}
+
+
+.actions-menu button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+.actions-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.actions-dropdown button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 0.9em;
+    text-align: left;
+}
+.actions-dropdown button:hover{
+    background-color: #f0f0f0;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Permettre le défilement si nécessaire */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacement entre les messages */
+
+}
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+.sent {
+     background-color: #FD9BC2;
+     align-self: flex-end;
+}
+.received {
+     background-color: #f0f0f0;
+    align-self: flex-start;
+}
+.message-input {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+.message-input textarea{
+    flex-grow: 1;
+    border-radius: 10px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.message-input button {
+    background-color: #FD9BC2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.hidden{
+    display: none;
+}
+
+@media (max-width: 768px) {
+   .chat-window {
+        width: 95%;
+        height: 95%;
+    }
+}
+
 /*Page Swipe */
 .swipe-page {
     padding-top: 80px;
