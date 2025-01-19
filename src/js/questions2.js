@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const profileRecherche = document.getElementById('profile-recherche');
          const profileCitation = document.getElementById('profile-citation');
          const profilePassions = document.getElementById('profile-passions');
-          const continueButton = document.querySelector('.button-container-form2 button');
+          const continueButton = document.querySelector('.button-container button');
 
 
      let storedData = localStorage.getItem('formData');

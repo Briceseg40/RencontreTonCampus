@@ -1,6 +1,7 @@
 body {
     margin: 0;
 }
+
 /*Style Global du style */
 h1 {
     margin: 0;
@@ -14,10 +15,12 @@ h2 {
     font-size: 35px;
 }
 
-p, a {
+p,
+a {
     font-size: 20px;
     font-family: 'Bahnschrift';
 }
+
 ul {
     font-family: 'Bahnschrift';
 }
@@ -49,21 +52,33 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-  }
-input:focus, textarea:focus {
-      outline: none;
-      border-color: #FD9BC2;
-      box-shadow: 0 0 5px #FD9BC2; 
-  }
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #FD9BC2;
+    box-shadow: 0 0 5px #FD9BC2;
+}
+
+textarea {
+    height: 70px;
+}
+
 /*Background commun*/
-main, .container-connexion, .container-questions1 {
-    background-image: url('../../img/floup.png'); 
-    background-size: cover; 
-    background-position: center; 
+main,
+.container-connexion,
+.container-questions1 {
+    background-image: url('../../img/floup.png');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     position: relative;
 }
-.container-connexion::before, main::before, .container-questions1::before {
+
+.container-connexion::before,
+main::before,
+.container-questions1::before {
     content: "";
     position: absolute;
     top: 0;
@@ -134,9 +149,11 @@ header #lien-profil i:hover {
     color: #FD9BC2;
 
 }
+
 header ul li a i {
     color: white;
 }
+
 header ul {
     display: flex;
     list-style-type: none;
@@ -153,6 +170,7 @@ header ul li a {
     border-radius: 20px;
     padding: 10px;
 }
+
 #btn-inscription {
     border: 2px solid black;
 }
@@ -177,15 +195,15 @@ header ul li a {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0; 
+    z-index: 0;
 }
 
 .hero h1 {
     margin: 0;
     text-align: center;
     padding-top: 2%;
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
     color: white;
 }
 
@@ -197,8 +215,8 @@ header ul li a {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 45px;
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
 }
 
 .hero .container-presentation .profil {
@@ -224,7 +242,7 @@ header ul li a {
     border-radius: 10px;
     font-size: 20px;
     border: 2px solid black;
-    position: relative; 
+    position: relative;
     z-index: 1;
 }
 
@@ -268,10 +286,12 @@ header ul li a {
     border: 2px solid transparent;
 
 }
+
 .infos-rencontres .bloc-infos-rencontres .bloc-infos-texte a:hover {
     background-color: white;
     border: 2px solid black;
 }
+
 .infos-rencontres .bloc-infos-rencontres img {
     width: 100%;
     height: 500px;
@@ -289,6 +309,7 @@ header ul li a {
     border: 2px solid transparent;
 
 }
+
 .match-infos .bloc-infos-rencontres .bloc-infos-texte a:hover {
     background-color: #FD9BC2;
     border: 2px solid white;
@@ -300,31 +321,37 @@ header ul li a {
 }
 
 /* Page Assistance / Page Evenements les deux pages sont trés similaire et le css de même */
-.contact-page, .evenement-page {
+.contact-page,
+.evenement-page {
     padding-top: 80px;
     padding-bottom: 50px;
 }
 
-.contact-container, .evenement-container {
+.contact-container,
+.evenement-container {
     border-radius: 20px;
     background-color: white;
     position: relative;
     text-align: center;
     padding: 20px;
-    width: 60%; 
+    width: 60%;
     max-width: 80%;
 }
 
-.contact-container h1, .evenement-container h1 {
+.contact-container h1,
+.evenement-container h1 {
     margin-bottom: 20px;
     color: #FD9BC2;
 }
-.evenement-container ul li{
-    list-style-type:none;
+
+.evenement-container ul li {
+    list-style-type: none;
 }
+
 .checkbox-container input {
     margin-bottom: 20px;
 }
+
 #contact-form {
     display: flex;
     margin-top: 70px;
@@ -362,19 +389,18 @@ header ul li a {
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
-     margin-top: 20px;
+    margin-top: 20px;
 }
 
 #contact-form button[type="submit"]:hover {
-      background-color: #f27ca8;
+    background-color: #f27ca8;
 }
 
 /*Page connexion de compte ou inscription par Nasrallah Talmani*/
 .container-connexion {
-    
     display: flex;
-    flex-direction: column; 
-   justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 50px 0;
     background-color: #FDF4F2;
@@ -388,287 +414,179 @@ header ul li a {
 .container-connexion form {
     margin: 150px 0;
     z-index: 1;
-  padding: 20px; /* Adjusted padding */
-  border-radius: 10px;
-  width: 350px; /* Adjusted width */
-  background-color: white;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    background-color: white;
 }
 
 .question-group {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .question-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 13px;
+    margin-bottom: 8px;
+    font-size: 13px;
 }
 
-.question-group input[type="text"],.question-group input[type="email"],
+.question-group input[type="text"],
+.question-group input[type="email"],
 .question-group input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 0;
-  border: none;
-  border-radius: 0;
-  font-size: 12px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #000;
-  background-color: transparent;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
 }
 
 .container-connexion form .button-container {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
+
 .container-connexion form .button-container a {
     font-size: 15px;
     margin-top: 10px;
 }
-.login-page .button-container button {
-  background-color: #ff6b81;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  width: 100%;
-}
+
 /*Questions1 */
 .container-questions1 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
-    margin: auto;
 }
 
-.left-section {
+.left-section, .right-section {
     z-index: 1;
-padding: 60px 0;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    padding: 60px 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.right-section {
-  padding: 60px 0;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .left-section form {
-  padding: 15px 20px 20px 20px;
-  border-radius: 10px;
-  width: 330px;
-  background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 330px;
+    background-color: #ffffff;
 }
 
 .profile-section {
-  padding: 15px 20px 20px 20px;
-  border-radius: 10px;
-  width: 300px;
-  text-align: center;
-  position: relative;
-  background-color: #ffffff;
+    padding: 15px 20px 20px 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    background-color: #ffffff;
 }
 
 .profile-section img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-top: 10px;
-}
-
-.question-group {
-  margin-bottom: 10px;
-} 
-
-.question-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 13px;
-}
-
-.question-group input[type="text"],
-.question-group textarea {
-  width: 285px;
-  padding: 5px;
-  margin-bottom: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 12px;
-}
-
-textarea {
-  height: 45px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
 }
 
 .radio-group {
-  margin-bottom: 8px;
-  font-size: 12px;
-  display: flex;
-  flex-direction: row;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
 }
 
 .radio-group label {
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 0px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0px;
 }
 
 .radio-group input {
-  margin: 0px 3px 8px 0px;
-  accent-color: #555555;
-}
-
-.button-container {
-  text-align: center;
-  margin-top: 5px;
-}
-
-
-
-.progress-info {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 12px;
-  color: #555555;
+    margin: 0px 3px 8px 0px;
+    accent-color: #555555;
 }
 
 .asterisk-info p {
-  margin-top: 5px;
-  font-size: 8px;
-  color: #555555;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #555555;
 }
-
 .profile-info {
-  text-align: center;
-  font-size: 13px;
-  margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
-.profile-info p {
-  margin: 2px;
+.question-group textarea {
+    width: 285px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .bio-container {
-  border: 1px solid #555555;
-  border-radius: 3px;
-  padding: 5px;
-  margin-top: 10px;
-  font-size: 13px;
-  text-align: left;
-}
-
-.bio-container p {
-  margin: 2px;
+    border: 1px solid #555555;
+    border-radius: 3px;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: left;
 }
 
 .profile-section p {
-  font-size: 13px;
-  margin: 5px;
+    font-size: 13px;
+    margin: 5px;
 }
 
 .error-message {
-  color: red;
-  font-size: 10px;
-  margin-top: -8px;
-  display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: -8px;
+    display: block;
 }
-
-.logo-container-form2 {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  margin: 10px 0px 0px 10px;
-  z-index: 1;
-}
-.logo-container-form2 img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-.container-form2 {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-section{
-  display: block;
-  unicode-bidi: isolate;
-}
-.profile-section-form2 img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  margin-top: 10px;
-}
-
-.question-group-form2 {
-  margin-bottom: 10px;
-}
-
-.question-group-form2 label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 13px;
-}
-
-.question-group-form2 input[type="text"],
-.question-group-form2 textarea, .question-group-form2 input[type="file"] {
-  width: 285px;
-  padding: 5px;
-  margin-bottom: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 12px;
-}
-
-textarea{
-  height: 70px;
-}
-
+/*Questions formulaire 2 */
 .checkbox-group-form2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
     margin-bottom: 10px;
 }
+
 .checkbox-item {
     display: flex;
     align-items: center;
 }
+
 .checkbox-group-form2 label {
     font-size: 12px;
     margin-bottom: 0;
     margin-left: 5px;
 }
+
 .checkbox-group-form2 input {
     margin: 0;
     width: 15px;
     height: 15px;
 }
+
 .radio-group-form2 {
     margin-bottom: 8px;
     font-size: 12px;
     display: flex;
     flex-direction: row;
 }
+
 .radio-group-form2 label {
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 0px;
     margin-left: 5px;
 }
+
 .radio-group-form2 input {
     margin: 0;
     vertical-align: middle;
@@ -677,109 +595,11 @@ textarea{
     width: 15px;
     height: 15px;
 }
+
 .button-container-form2 {
-  text-align: center;
-  margin-top: 5px;
-}
-
-
-
-.progress-info-form2 {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 12px;
-  color: #555555;
-}
-.asterisk-info-form2 {
+    text-align: center;
     margin-top: 5px;
-    font-size: 8px;
-    color: #555555;
 }
-.profile-info-form2 {
-  text-align: center;
-  font-size: 13px;
-  margin-top: 10px;
-}
-.profile-info-form2 p{
-  margin: 2px;
-}
-.profile-bio-form2 {
-  border: 1px solid #555555;
-  border-radius: 10px;
-  padding: 5px;
-  margin: 10px 0px 10px 0px;
-  font-size: 13px;
-  text-align: left;
-}
-.profile-bio-form2 p{
-  margin : 2px;
-}
-.profile-section-form2 p{
-  font-size: 13px;
-  margin: 5px;
-}
-.error-message-form2 {
-    color: red;
-    font-size: 10px;
-    margin-top: -8px;
-    display: block;
-}
-
-.profile-info-supp {
-    
-    padding: 5px;
-    margin-top: 10px;
-    font-size: 13px;
-    text-align: left;
-}
-.profile-info-supp p {
-  font-weight: normal;
-    margin: 2px 0px 2px 0px;
-}
-
-.profile-info-supp p:first-line {
-    font-weight: bold;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*Page messagerie */
 .message-page {
@@ -799,42 +619,49 @@ textarea{
     align-items: flex-start;
     gap: 20px;
 }
-.match-list-container{
+
+.match-list-container {
     background-color: white;
     border-radius: 20px;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-        height: fit-content;
-        width: 250px;
-        max-width: 300px;
-        text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: fit-content;
+    width: 250px;
+    max-width: 300px;
+    text-align: left;
 }
+
 .match-list-container h2 {
     margin-bottom: 15px;
     color: #FD9BC2;
 }
-.match-list{
+
+.match-list {
     list-style: none;
     padding: 0;
 }
+
 .match-list li {
     margin-bottom: 10px;
-     cursor: pointer;
+    cursor: pointer;
     padding: 10px;
     border-radius: 10px;
-        display: flex;
-     align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .match-list li:hover {
     background-color: #f0f0f0;
 }
-.match-list li img{
+
+.match-list li img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-     margin-right: 10px;
+    margin-right: 10px;
 }
+
 .chat-window {
     background-color: white;
     border-radius: 20px;
@@ -843,9 +670,10 @@ textarea{
     height: 90%;
     display: flex;
     flex-direction: column;
-     max-width: 1000px;
+    max-width: 1000px;
 
 }
+
 .chat-header {
     display: flex;
     justify-content: space-between;
@@ -853,10 +681,12 @@ textarea{
     padding: 15px;
     border-bottom: 1px solid #eee;
 }
+
 .profile-info {
     display: flex;
     align-items: center;
 }
+
 .profile-info img {
     width: 50px;
     height: 50px;
@@ -864,12 +694,14 @@ textarea{
     object-fit: cover;
     margin-right: 10px;
 }
+
 .profile-info h2 {
     color: #FD9BC2;
     margin-bottom: 5px;
     font-size: 1.2em;
 }
-.profile-info p{
+
+.profile-info p {
     font-size: 0.9em;
 }
 
@@ -883,9 +715,11 @@ textarea{
     cursor: pointer;
     font-size: 25px;
 }
- .actions-menu button i{
-        color: pink;
- }
+
+.actions-menu button i {
+    color: pink;
+}
+
 .actions-dropdown {
     position: absolute;
     color: black;
@@ -893,7 +727,7 @@ textarea{
     right: 0;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
 }
@@ -907,7 +741,8 @@ textarea{
     font-size: 0.9em;
     text-align: left;
 }
-.actions-dropdown button:hover{
+
+.actions-dropdown button:hover {
     background-color: #f0f0f0;
 }
 
@@ -917,34 +752,40 @@ textarea{
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px; 
+    gap: 10px;
 }
+
 .message {
     padding: 10px;
     border-radius: 10px;
     max-width: 70%;
 }
+
 .sent {
-     background-color: #FD9BC2;
-     align-self: flex-end;
+    background-color: #FD9BC2;
+    align-self: flex-end;
 }
+
 .received {
-     background-color: #f0f0f0;
+    background-color: #f0f0f0;
     align-self: flex-start;
 }
+
 .message-input {
     padding: 15px;
     border-top: 1px solid #eee;
     display: flex;
     align-items: center;
 }
-.message-input textarea{
+
+.message-input textarea {
     flex-grow: 1;
     border-radius: 10px;
     resize: none;
     padding: 10px;
     border: 1px solid #ccc;
 }
+
 .message-input button {
     background-color: #FD9BC2;
     color: white;
@@ -986,15 +827,17 @@ textarea{
     display: flex;
     flex-direction: column;
     align-items: center;
-   position: relative;
+    position: relative;
 }
+
 .image-container {
-     display: flex;
+    display: flex;
     align-items: center;
-     margin-bottom: 20px;
-     position: relative;
+    margin-bottom: 20px;
+    position: relative;
 }
-.profile-text{
+
+.profile-text {
     text-align: center;
 }
 
@@ -1004,6 +847,7 @@ textarea{
     height: 300px;
     object-fit: cover;
 }
+
 .image-button {
     border: none;
     cursor: pointer;
@@ -1020,6 +864,7 @@ textarea{
 .next-image {
     right: 10px;
 }
+
 .profile-card h2 {
     margin-bottom: 10px;
     color: #FD9BC2;
@@ -1114,10 +959,10 @@ textarea{
     position: relative;
 }
 
-.wheel-main button{
+.wheel-main button {
     position: relative;
-z-index: 1;
-margin: 0 auto;
+    z-index: 1;
+    margin: 0 auto;
 }
 
 #canvas {
@@ -1258,7 +1103,7 @@ margin: 0 auto;
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #f00; 
+    background-color: #f00;
     border-radius: 0%;
 }
 
@@ -1267,9 +1112,11 @@ margin: 0 auto;
         transform: translateY(0) rotate(0deg);
         opacity: 1;
     }
+
     50% {
         opacity: 0.8;
     }
+
     100% {
         transform: translateY(95vh) rotate(360deg);
         opacity: 0;
@@ -1289,6 +1136,7 @@ margin: 0 auto;
         font-size: 1.2em;
     }
 }
+
 /*Footer*/
 
 footer {
@@ -1313,7 +1161,7 @@ footer .container {
 
 .links div {
     flex: 1;
-    min-width: 150px; 
+    min-width: 150px;
 }
 
 .links h4 {
@@ -1346,13 +1194,15 @@ footer .container {
 .social a i {
     font-size: 25px;
 }
+
 .social a {
     color: #fff;
     margin-left: 10px;
     text-decoration: none;
     font-size: 1.2em;
 }
-.social a img{
+
+.social a img {
     height: 20px;
 }
 
@@ -1362,8 +1212,9 @@ footer .container {
     border-top: 1px solid #fff;
     padding-top: 20px;
     display: flex;
-text-align: center;
-justify-content: space-between;}
+    text-align: center;
+    justify-content: space-between;
+}
 
 .copyright p {
     margin: 0;
@@ -1396,6 +1247,7 @@ footer .container .social a i:hover {
     }
 
 }
+
 @media (max-width: 425px) {
     #canvas {
         width: 90vw;
@@ -1407,28 +1259,34 @@ footer .container .social a i:hover {
         font-size: 1.2em;
     }
 }
+
 /*Messagerie*/
 @media (max-width: 768px) {
     .profile-card {
         width: 90%;
     }
+
     .message-container {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
         gap: 15px;
     }
+
     .match-list-container {
         width: 95%;
-        max-width: none; 
+        max-width: none;
     }
-   .chat-window {
+
+    .chat-window {
         width: 95%;
         height: 95%;
     }
+
     .contact-container {
         width: 95%;
     }
+
     .form-group {
-          width: 90%;
+        width: 90%;
     }
 }

@@ -72,8 +72,6 @@ function validerFormulaire() {
     } else {
         document.getElementById('orientation-error').textContent = '';
     }
-
-    // Si le formulaire n'est pas valide, on empêche le passage à la partie 2
     if (!isValid) {
         return;
     }
@@ -89,7 +87,6 @@ function validerFormulaire() {
         recherche:  selectedRechercheValue || "Des amis"
     };
    localStorage.setItem('formData', JSON.stringify(formData));
-  // Rediriger vers la page questions2
     window.location.href = '../../page/Creation-de-compte/questions2.html';
 }
 
