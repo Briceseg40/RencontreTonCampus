@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de connexion</title>
+    <title>Page d'inscription</title>
     <link rel="stylesheet" href="../../src/index.css">
 </head>
-
 <body>
     <header>
         <div class="logo-lien">
@@ -21,30 +19,33 @@
         </div>
         <ul>
             <li><a id="lien-profil" class="btn-transition" href="../Messagerie/message.html">
-                    <i class="fa-solid fa-comment"></i>
-                </a></li>
+                <i class="fa-solid fa-comment"></i>
+            </a></li>
             <li><a id="lien-profil" class="btn-transition" href="../Creation-de-compte/connexioncompte.html"><i
                         class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
     <section class="container">
+        <h1>INSCRIVEZ-VOUS DÈS MAINTENANT</h1>
         <section class="questionnaire-section">
-            <form action="questions.html">
+            <form action="traitement_inscription.php" method="post">
                 <section class="question-group">
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" placeholder="lucas76@gmail.com" required>
+                    <input type="text" id="email" name="email" placeholder="votre@email.com" required>
                 </section>
                 <section class="question-group">
                     <label for="password">Mot de passe</label>
                     <input type="password" id="password" name="password" placeholder=".........." required>
                 </section>
-
+                <section class="question-group">
+                    <label for="confirm_password">Confirmer le mot de passe</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder=".........." required>
+                </section>
                 <section class="button-container">
-                    <button type="submit">ENTRER</button>
+                    <button type="submit">S'INSCRIRE</button>
                 </section>
             </form>
         </section>
     </section>
 </body>
-
 </html>
