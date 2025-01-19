@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roulette</title>
+    <script src="https://kit.fontawesome.com/0fbb9c4122.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../src/index.css">
 </head>
 
 <body>
     <header>
-        <a href="../Accueil/accueil.html">
-            <img src="../../img/LOGO.png" alt="Logo Rencontre ton campus">
-        </a>
+        <div class="logo-lien">
+            <a href="../Accueil/accueil.html"><img src="../../img/LOGO.png" alt="Logo Rencontre ton campus"></a>
+            <ul>
+                <li><a class="class-hover-lien" href="../Accueil/">Évenements</a></li>
+                <li><a class="class-hover-lien" href="/">Messagerie</a></li>
+                <li><a class="class-hover-lien" href="../Roulette/roulette.html">Roulette</a></li>
+                <li><a class="class-hover-lien" href="/">F.A.Q</a></li>
+                <li><a class="class-hover-lien" href="/">Contactez-nous</a></li>
+            </ul>
+        </div>
         <ul>
-            <li><a href="/">Évenements</a></li>
-            <li><a href="/">Messagerie</a></li>
-            <li><a href="/">Roulette</a></li>
-            <li><a href="/">Profil</a></li>
+            <li><a id="lien-profil" class="btn-transition " href="../Creation-de-compte/connexioncompte.html"><i
+                        class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
     <main>
@@ -27,8 +33,8 @@
                     <span class="wheel-text">SPIN!</span>
                 </div>
             </div>
+            <button class="spin-button">Je fais tourner</button>
         </div>
-        <button class="spin-button">Appuyez pour tourner</button>
     </main>
     <script src="../../src/js/script.js"></script>
 </body>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swipe - Rencontre ton campus</title>
+    <link rel="stylesheet" href="../../src/index.css">
+    <link rel="stylesheet" href="swipe.css">
+    <script src="https://kit.fontawesome.com/0fbb9c4122.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-lien">
+            <img src="../../img/LOGO.png" alt="Logo Rencontre ton campus">
+            <ul>
+                <li><a class="class-hover-lien" href="../../page/evenement/evenement.html">Évenements</a></li>
+                <li><a class="class-hover-lien" href="/">Messagerie</a></li>
+                <li><a class="class-hover-lien" href="../../page/Roulette/roulette.html">Roulette</a></li>
+                <li><a class="class-hover-lien" href="/">F.A.Q</a></li>
+                <li><a class="class-hover-lien" href="/">Contactez-nous</a></li>
+            </ul>
+        </div>
+        <ul>
+            <li><a id="lien-profil" class="btn-transition" href="../Creation-de-compte/connexioncompte.html"><i
+                        class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </header>
+    <main class="swipe-page">
+        <div id="match-message" class="match-message hidden">C'est un match !</div>
+        <section class="swipe-container center-page">
+
+            <div class="profile-card" id="profile-card">
+                <button class="image-button prev-image" >
+                 <i class="fa-solid fa-arrow-left"></i>
+                </button>
+             <div class="image-container" >
+                  <img id="profile-image"  alt="Photo de profil">
+                </div>
+                <button class="image-button next-image">
+                 <i class="fa-solid fa-arrow-right"></i>
+                </button>
+               
+                <div class="profile-text">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="swipe-button dislike-button">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <button class="swipe-button like-button">
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="links">
+                <div>
+                    <h4>À propos de nous</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">Nos actualités</a></li>
+                        <li><a class="class-hover-lien" href="#">Histoire</a></li>
+                        <li><a class="class-hover-lien" href="#">Carrière</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Besoin d'aide ?</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">FAQ</a></li>
+                        <li><a class="class-hover-lien" href="#">Nous contacter</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Utilisation</h4>
+                    <ul>
+                        <li><a class="class-hover-lien" href="#">Conditions d'utilisation</a></li>
+                        <li><a class="class-hover-lien" href="#">Politique de Confidentialité</a></li>
+                        <li><a class="class-hover-lien" href="#">Politique d'utilisation des cookies</a></li>
+                        <li><a class="class-hover-lien" href="#">Paramètres des cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 Rencontre ton campus. Tous Droits Réservés.</p>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../src/js/swipe.js"></script>
+</body>
+
+</html>

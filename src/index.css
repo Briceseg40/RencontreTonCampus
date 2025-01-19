@@ -41,6 +41,7 @@ a {
     margin: 0 auto;
 }
 
+/* Page d'accueil*/
 header {
     background-color: black;
     display: flex;
@@ -123,12 +124,12 @@ header ul li a {
 /*Hero*/
 
 .hero {
-    position: relative; /* Essentiel pour le pseudo-élément */
+    position: relative;
     background-image: url('../img/floup.png');
     background-size: cover;
     text-align: center;
     width: 100%;
-    color: white; /* Important pour que le texte soit visible */
+    color: white;
     padding-bottom: 100px;
 }
 
@@ -187,8 +188,8 @@ header ul li a {
     border-radius: 10px;
     font-size: 20px;
     border: 2px solid black;
-    position: relative; /* Indispensable pour que le bouton soit au-dessus */
-    z-index: 1; /* Mettre le bouton au-dessus du pseudo-élément */
+    position: relative; 
+    z-index: 1;
 }
 
 .hero .btn-profil:hover {
@@ -280,7 +281,7 @@ header ul li a {
     text-align: left;
 }
 
-/*Page connexion de compte ou inscription */
+/*Page connexion de compte ou inscription par Nasrallah Talmani*/
 
 .hero-connexion {
     background-color: rgba(202, 161, 161, 70%);
@@ -324,73 +325,289 @@ form {
     height: 90%;
     width: 1200px;
 }
+/* Page Evenements */
+.evenement-page {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-color: #fdf4f2;
+    color: #333;
+}
 
+.evenement-container {
+    text-align: center;
+    padding: 20px;
+}
 
+.evenement-container h1 {
+    margin-bottom: 20px;
+    color: #FD9BC2;
+}
+
+.prepare-text {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.regles-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.titre-regles {
+    color: #FD9BC2;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+.description-regles {
+    margin-bottom: 20px;
+}
+
+.regles-list {
+    list-style: none;
+    padding-left: 0;
+    display: inline-block;
+}
+
+.regles-list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+    text-align: left;
+}
+
+.regles-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FD9BC2;
+}
+
+.checkbox-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.checkbox-container label {
+    color: #333;
+}
+
+.btn-participer {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #FD9BC2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.btn-participer:hover {
+    background-color: #f27ca8;
+}
+
+.btn-participer:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .regles-container {
+        width: 90%;
+    }
+
+    .evenement-container h1 {
+        font-size: 2.5em;
+    }
+}
+/*Page Swipe */
+.swipe-page {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-color: #fdf4f2;
+    color: #333;
+    position: relative;
+}
+
+.swipe-container {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 20px;
+    width: 400px;
+    max-width: 90%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   position: relative;
+}
+.image-container {
+     display: flex;
+    align-items: center;
+     margin-bottom: 20px;
+     position: relative;
+}
+.profile-text{
+    text-align: center;
+}
+
+.profile-card img {
+    width: 200px;
+    border-radius: 10px;
+    height: 300px;
+    object-fit: cover;
+}
+.image-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-image {
+    left: 10px;
+}
+
+.next-image {
+    right: 10px;
+}
+.profile-card h2 {
+    margin-bottom: 10px;
+    color: #FD9BC2;
+}
+
+.profile-card p {
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.swipe-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.like-button i {
+    color: #11FF37;
+    transition: all 0.3s ease;
+}
+
+.dislike-button i {
+    color: #ff0000;
+    transition: all 0.3s ease;
+}
+
+.like-button i:hover {
+    color: #008000;
+}
+
+.dislike-button i:hover {
+    color: #8b0000;
+}
+
+.match-message {
+    background-color: #11FF37;
+    overflow: hidden;
+    width: 100%;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        width: 90%;
+    }
+}
 /*La Roulette par Jon Henry */
 main {
     margin: 0 auto;
 }
 
 .wheel-container {
-    width: 600px;
-    /* Augmentation de la taille de la roue */
-    height: 600px;
-    /* Augmentation de la taille de la roue */
-    margin-bottom: 30px;
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+    text-align: center;
 }
 
 .wheel {
     width: 100%;
     height: 100%;
     background-image: conic-gradient(#FF0000,
-            /* Rouge */
             #FF4500,
-            /* Orange */
             #DC143C,
-            /* Rouge foncé */
             #800000,
-            /* Marron */
             #483D8B,
-            /* Bleu foncé */
             #4B0082,
-            /* Indigo */
             #800080,
-            /* Violet */
             #FF00FF
-            /* Magenta */
         );
-    /* Couleurs de la roue */
     border-radius: 50%;
     border: 3px solid black;
     position: relative;
     transition: transform 5s ease-out;
-    /* Ajout de la transition pour la rotation */
 }
 
-/* ... autres styles ... */
-
-/* ... autres styles ... */
 
 .wheel {
-    /* ... autres propriétés ... */
     transition: transform 0.5s ease-out;
-    /* On rajoute une transition au transform */
 }
 
 .wheel.spinning {
     animation: spin 0.5s linear infinite;
-    /* Vitesse augmentée (durée de 0.5s) */
 }
 
 .wheel:not(.spinning) {
     transition: transform 5s ease-out;
-    /* On met une autre valeur pour le retour à la position initiale */
 }
 
-/* ... reste du CSS ... */
 
-/* ... reste du CSS ... */
-/* Définition de l'animation de rotation */
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -403,11 +620,8 @@ main {
 
 .wheel-center {
     width: 180px;
-    /* Augmentation de la taille du centre */
     height: 180px;
-    /* Augmentation de la taille du centre */
     background-color: #000080;
-    /* Bleu foncé */
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -423,9 +637,7 @@ main {
     content: "";
     position: absolute;
     width: 210px;
-    /* Augmentation de la taille du contour blanc */
     height: 210px;
-    /* Augmentation de la taille du contour blanc */
     background-color: transparent;
     border-radius: 50%;
     top: 50%;
@@ -437,24 +649,18 @@ main {
 
 .wheel-text {
     font-size: 55px;
-    /* Augmentation de la taille du texte */
     font-weight: bold;
     color: #FFF;
-    /* Blanc */
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-    /* Contour noir pour le texte */
 }
 
 .spin-button {
+    margin-top: 40px;
     background-color: #000;
-    /* Noir */
     color: #FFF;
-    /* Blanc */
     padding: 20px 40px;
-    /* Augmentation du padding du bouton */
     border: none;
     border-radius: 10px;
-    /* Augmentation du border-radius */
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
