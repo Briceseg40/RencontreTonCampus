@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roulette Aléatoire</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../src/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/0fbb9c4122.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <div class="logo-lien">
-            <img src="LOGO-MC.png" alt="Logo Rencontre ton campus">
+            <img src="../../img/LOGO.png" alt="Logo Rencontre ton campus">
             <nav>
                 <ul>
                     <li><a class="class-hover-lien" href="../../page/evenement/">Événements</a></li>
@@ -30,7 +30,7 @@
         </ul>
     </header>
 
-    <main>
+    <main class="wheel-main">
         <div class="wheel-container">
             <canvas id="canvas" width="400" height="400"></canvas>
         </div>
@@ -44,12 +44,11 @@
                 <img id="modalImage" src="" alt="Image de la personne">
                 <p id="modalName"></p>
                 <div class="button-container">
-                    <button id="matchBtn">Match</button>
                     <button id="unmatchBtn">Pass</button>
+                    <button id="matchBtn">Match</button>
                 </div>
             </div>
         </div>
-
         <audio id="wheel-sound" src="https://tools.waytolearnx.com/themes/altum/assets/mp3/wheel-spinning.mp3"></audio>
     </main>
 
@@ -94,6 +93,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../../src/js/roulette.js"></script>
 </body>
 </html>

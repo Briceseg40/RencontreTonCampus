@@ -113,7 +113,7 @@ function spin() {
 
             // Choix aléatoire d'une image parmi les 10 images de femmes
             const imageIndex = Math.floor(Math.random() * 10) + 1; // Génère un nombre aléatoire entre 1 et 10
-            selectedImage = `femme${imageIndex}.jpg`; // Construit le nom de l'image
+            selectedImage = `../../img/femme${imageIndex}.jpg`; // Construit le nom de l'image
 
             drawWheel();
             spinning = false;

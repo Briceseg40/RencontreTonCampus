@@ -1104,6 +1104,7 @@ textarea{
 /*Page Roulette par Jon Henry */
 
 .wheel-container {
+    z-index: 1;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 400px;
@@ -1111,6 +1112,12 @@ textarea{
     margin: 0 auto;
     text-align: center;
     position: relative;
+}
+
+.wheel-main button{
+    position: relative;
+z-index: 1;
+margin: 0 auto;
 }
 
 #canvas {
