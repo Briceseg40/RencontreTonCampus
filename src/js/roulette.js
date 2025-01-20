@@ -168,14 +168,14 @@ window.onclick = function (event) {
     }
 }
 
-
-
-
 // Gestion des boutons Match et Unmatch
 function handleAction(action) {
     if (action === 'match') {
         createConfetti(); // Ajoute les confettis
+        modal.classList.add("modal-green")
     } else if (action === 'unmatch') {
+        modal.classList.add("modal-red")
+
     }
        setTimeout(() => {
         modal.style.display = "none";
@@ -217,3 +217,4 @@ function createConfetti() {
 drawWheel();
 spinWheelBtn.addEventListener('click', spin);
 canvas.addEventListener('click', spin);
+

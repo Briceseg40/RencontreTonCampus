@@ -233,17 +233,6 @@ header ul li a {
     background-color: rgba(0, 0, 0, 60%);
 }
 
-.hero .btn-profil {
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 20px;
-    border: 2px solid black;
-    position: relative;
-    z-index: 1;
-}
 
 .hero .btn-profil:hover {
     background-color: #FD9BC2;
@@ -273,7 +262,9 @@ header ul li a {
     padding: 0 40px;
 }
 
-.infos-rencontres .bloc-infos-rencontres .bloc-infos-texte a {
+.infos-rencontres .bloc-infos-rencontres .bloc-infos-texte a, .hero .btn-profil {
+    z-index: 1;
+    position: relative;
     display: block;
     width: fit-content;
     margin: 0 auto;
@@ -286,7 +277,7 @@ header ul li a {
 
 }
 
-.infos-rencontres .bloc-infos-rencontres .bloc-infos-texte a:hover {
+.infos-rencontres .bloc-infos-rencontres .bloc-infos-texte a:hover, .hero .btn-profil:hover {
     background-color: white;
     border: 2px solid black;
 }
@@ -802,7 +793,9 @@ header ul li a {
     color: #333;
     position: relative;
 }
-
+.swipe-page .modal-green {
+    background-color: #008000;
+}
 .swipe-container {
     text-align: center;
     padding: 20px;
@@ -924,13 +917,20 @@ header ul li a {
 }
 
 /*Page Roulette par Jon Henry */
-
 /* Styles pour l'affichage principal de la roue */
 .wheel-main {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 0;
+}
+
+.wheel-main .modal-green {
+    background-color: #11ff39c0;
+}
+.wheel-main .modal-red {
+    background-color: #ff0000a1;
 }
 /*Conteneur du canvas */
 .wheel-container {
@@ -1014,13 +1014,14 @@ header ul li a {
     position: relative;
     background-color: white;
     margin: auto;
+    margin-top: 60px;
     padding: 20px;
     border: 1px solid #888;
-     border-radius: 20px;
+    border-radius: 20px;
     width: 80%;
     max-width: 400px; /* Largeur maximale de la modale */
     text-align: center; /* Centre le texte de la modale */
-      display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
