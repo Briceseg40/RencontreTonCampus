@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
      const profileCitation = document.getElementById('profile-citation');
     const profilePassions = document.getElementById('profile-passions');
      const continueButton = document.querySelector('.button-container-form2 button');
+     const form = document.getElementById('questionnaireForm');
 
     let storedData = localStorage.getItem('formData');
 
@@ -20,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         profileVille.textContent = formData.ville;
         profileTaille.textContent = formData.taille;
          profileDescription.textContent = formData.description;
-        profileStatut.textContent = formData.statut;
-        profileOrientation.textContent = formData.orientation;
-         profileRecherche.textContent = formData.recherche;
+        profileStatut.value = formData.statut;
+        profileOrientation.value = formData.orientation;
+         profileRecherche.value = formData.recherche;
          localStorage.removeItem('formData');
       }
       continueButton.addEventListener('click', function(event){
@@ -54,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
        if(!isValid){
          return;
        }
-          // À ce stade, toutes les validations ont réussi, vous pouvez traiter les données du formulaire
           alert("Formulaire soumis avec succès !");
     })
 });
