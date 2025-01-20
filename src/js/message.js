@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 1,
               name: "Sarah",
             age: 23,
-            image: "../../img/sarah.png",
+            image: "../../img/sarah.jpg",
             messages: [
                {
                 sender: "sarah",
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
               id: 2,
              name: "Lucas",
             age: 23,
-             image: "../../img/lucas.png",
+             image: "../../img/lucas.jpg",
               messages: [
                  {
                  sender: "lucas",

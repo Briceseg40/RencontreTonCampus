@@ -138,13 +138,13 @@ header .logo-lien ul li a {
     width: 100%;
 }
 
-header #lien-profil {
+header .lien-profil {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
 }
 
-header #lien-profil i:hover {
+header .lien-profil i:hover {
     color: #FD9BC2;
 
 }
@@ -402,7 +402,7 @@ header ul li a {
 }
 
 .container-connexion form {
-    margin: 150px 0;
+    margin: 100px 0;
     z-index: 1;
     padding: 20px;
     border-radius: 10px;

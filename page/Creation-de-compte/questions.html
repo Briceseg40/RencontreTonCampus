@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../src/index.css">
 </head>
 <body>
-    <header>
+     <header>
         <div class="logo-lien">
             <a href="../Accueil/accueil.html"><img src="../../img/LOGO.png" alt="Logo Rencontre ton campus"></a>
              <ul>
@@ -19,15 +19,15 @@
             </ul>
         </div>
         <ul>
-            <li><a id="lien-profil" class="btn-transition" href="../Messagerie/message.html">
+            <li><a   class="btn-transition lien-profil" href="../Messagerie/message.html">
                 <i class="fa-solid fa-comment"></i>
             </a></li>
-            <li><a id="lien-profil" class="btn-transition" href="../Creation-de-compte/questions.html"><i
+            <li><a   class="btn-transition lien-profil" href="../Creation-de-compte/questions.html"><i
                         class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
 
-    <section class="container-questions1">
+    <div class="container-questions1">
         <div class="left-section">
                 <form id="questionnaireForm">
                     <div class="question-group">
@@ -100,15 +100,15 @@
                     <div class="button-container">
                         <button type="button" onclick="validerFormulaire()">Continue</button>
                     </div>
-                    <span class="asterisk-info">
+                    <div class="asterisk-info">
                         <p>*Question obligatoire</p>
-                    </span>
+                    </div>
                 </form>
         </div>
         <div class="right-section">
             <div class="profile-section">
                 <div class="profile-picture">
-                    <img src="../../img/alex.jpg" alt="Profile Picture">
+                    <img src="../../img/alex.jpg" alt="Photo de profile">
                 </div>
                 <div class="profile-info">
                     <p><b id="profile-prenom"></b><b id="profile-age"></b> <b id="profile-ville"></b>, <b id="profile-taille"></b></p>
@@ -122,7 +122,7 @@
                 <p>Ce que je recherche : <span id="profile-recherche"></span></p>
             </div>
         </div>
-    </section>
+    </div>
     <footer>
         <div class="container">
             <div class="links">

@@ -9,7 +9,7 @@
      <script src="https://kit.fontawesome.com/0fbb9c4122.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+     <header>
         <div class="logo-lien">
             <a href="../Accueil/accueil.html"><img src="../../img/LOGO.png" alt="Logo Rencontre ton campus"></a>
              <ul>
@@ -20,10 +20,10 @@
             </ul>
         </div>
         <ul>
-            <li><a id="lien-profil" class="btn-transition" href="../Messagerie/message.html">
+            <li><a   class="btn-transition lien-profil" href="../Messagerie/message.html">
                 <i class="fa-solid fa-comment"></i>
             </a></li>
-            <li><a id="lien-profil" class="btn-transition" href="../Creation-de-compte/questions.html"><i
+            <li><a   class="btn-transition lien-profil" href="../Creation-de-compte/questions.html"><i
                         class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
@@ -87,7 +87,7 @@
 
                     <div class="question-group">
                         <label for="citation">Quel est votre citation préférée?</label>
-                        <textarea id="description" name="citation" placeholder="Ex: Ne jamais remettre au lendemain ce qu'on peut faire le jour même. /Sensei Wu"></textarea>
+                        <textarea id="citation" name="citation" placeholder="Ex: Ne jamais remettre au lendemain ce qu'on peut faire le jour même. /Sensei Wu"></textarea>
                         <span class="error-message" id="citation-error"></span>
                     </div>
 
@@ -106,19 +106,19 @@
                 </form>
             </div>
         
-        <section class="right-section">
-            <section class="profile-section">
-                <section class="profile-picture">
-                    <img src="../../img/alex.jpg" alt="Profile Picture">
-                </section>
+        <div class="right-section">
+            <div class="profile-section">
+                <div class="profile-picture">
+                    <img src="../../img/alex.jpg" alt="Photo de profil">
+                </div>
                 
-                <section class="profile-info">
+                <div class="profile-info">
                     <p><b id="profile-prenom"></b> <b id="profile-age"></b>      <b id="profile-ville"></b>, <b id="profile-taille"></b></p>
-                </section>
-                <section class="bio-container">
+                </div>
+                <div class="bio-container">
                     <p><b>Biographie</b></p>
                      <p id="profile-description"></p>
-                </section>
+                </div>
                 
                 <p>Statut : <span id="profile-statut"></span></p>
                 <p>Sexualité : <span id="profile-orientation"></span></p>
@@ -126,8 +126,8 @@
                   <p>Etudes : <span id="profile-etudes">BUT Informatique</span></p>
                 <p>Mes passions : <span id="profile-passions"></span></p>
                 <p>Ma citation préférée : <span id="profile-citation"></span></p>
-            </section>
-        </section>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="container">
