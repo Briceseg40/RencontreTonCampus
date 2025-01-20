@@ -1,4 +1,6 @@
 const canvas = document.getElementById('canvas');
+const likeButton = document.querySelector('.like-button');
+const matchMessage = document.getElementById('match-message');
 const context = canvas.getContext('2d');
 const spinWheelBtn = document.getElementById('spin-wheel');
 const wheelSound = document.getElementById('wheel-sound');
@@ -18,6 +20,23 @@ let spinning = false;
 let speed = 0;
 let selectedName = "";
 let selectedImage = "";
+function showMatchMessage() {
+    matchMessage.classList.remove('hidden');
+    setTimeout(() => {
+        matchMessage.classList.add('hidden');
+    }, 2000);
+}
+
+likeButton.addEventListener('click', () => {
+    nextProfile(true);
+});
+
+function nextProfile(liked) {
+    if (liked) {
+        showMatchMessage();
+    }
+    loadProfile(currentProfileIndex);
+}
 
 function drawWheel() {
     const segmentCount = names.length;
@@ -153,24 +172,18 @@ window.onclick = function (event) {
 
 
 // Gestion des boutons Match et Unmatch
-document.getElementById("matchBtn").onclick = function () {
-    modal.classList.add("modal-green"); // Ajoute la classe verte
-    createConfetti(); // Ajoute les confettis
-    setTimeout(() => {
+function handleAction(action) {
+    if (action === 'match') {
+        createConfetti(); // Ajoute les confettis
+    } else if (action === 'unmatch') {
+    }
+       setTimeout(() => {
         modal.style.display = "none";
-        modal.classList.remove("modal-green"); // Retire la classe verte après la disparition
-    }, 500); // 500 millisecondes (0.5s) de délai
+       modal.classList.remove("modal-green", "modal-red");
+    }, 400);
 }
-
-
-document.getElementById("unmatchBtn").onclick = function () {
-    modal.classList.add("modal-red"); // Ajoute la classe rouge
-    setTimeout(() => {
-        modal.style.display = "none";
-        modal.classList.remove("modal-red"); // Retire la classe rouge après la disparition
-    }, 500); // 500 millisecondes (0.5s) de délai
-}
-
+document.getElementById("matchBtn").addEventListener('click', () => handleAction('match'));
+document.getElementById("unmatchBtn").addEventListener('click', () => handleAction('unmatch'));
 
 
 function createConfetti() {
@@ -178,7 +191,7 @@ function createConfetti() {
     confettiContainer.classList.add('confetti');
     document.body.appendChild(confettiContainer);
 
-    const confettiCount = 100;
+    const confettiCount = 200;
     const colors = ['#FD9BC2', '#FDF4F2', '#f0f', '#0ff', '#ff0', '#0f0'];
 
     for (let i = 0; i < confettiCount; i++) {

@@ -66,8 +66,8 @@ textarea {
 }
 
 /*Background commun*/
-main,
-.container-connexion,
+
+.container-connexion, .contact-page, .swipe-page,.evenement-page,.message-page,
 .container-questions1 {
     background-image: url('../../img/floup.png');
     background-size: cover;
@@ -76,8 +76,7 @@ main,
     position: relative;
 }
 
-.container-connexion::before,
-main::before,
+.container-connexion::before,.contact-page::before,.evenement-page::before,.swipe-page::before,.message-page::before,
 .container-questions1::before {
     content: "";
     position: absolute;
@@ -606,7 +605,7 @@ header ul li a {
     padding-top: 80px;
     padding-bottom: 50px;
     background-color: #fdf4f2;
-    color: #333;
+    color: black;
 }
 
 .message-container {
@@ -616,7 +615,6 @@ header ul li a {
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     gap: 20px;
 }
 
@@ -797,8 +795,6 @@ header ul li a {
     font-weight: bold;
 }
 
-
-
 /*Page Swipe */
 .swipe-page {
     padding-top: 80px;
@@ -920,43 +916,32 @@ header ul li a {
     text-align: center;
     position: absolute;
     top: 0;
-    z-index: 999;
+    z-index: 1;
 }
 
 .hidden {
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Page Roulette par Jon Henry */
 
+/* Styles pour l'affichage principal de la roue */
+.wheel-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+/*Conteneur du canvas */
 .wheel-container {
     z-index: 1;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 20px; /* Espacement au dessus du canvas */
+    padding-bottom: 20px; /* Espacement en dessous du canvas */
     width: 400px;
     height: 400px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
+    margin: 0 auto; /* Centrer horizontalement */
+    text-align: center; /* Centrer le contenu à l'interieur */
+    position: relative; /* Position relative pour les enfants */
 }
 
 .wheel-main button {
@@ -964,17 +949,18 @@ header ul li a {
     z-index: 1;
     margin: 0 auto;
 }
-
+/* Style pour le canvas de la roue */
 #canvas {
     border: 5px solid #FD9BC2;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    /* Ombre plus prononcée */
     width: 100%;
     height: 100%;
 }
-
+/* Style pour le bouton de spin */
 #spin-wheel {
-    background-color: #FD9BC2;
+    background-color: #FD9BC2; /* Couleur de fond */
     font-size: 1.45em;
     height: 3em;
     width: 50%;
@@ -991,12 +977,12 @@ header ul li a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
-
+/* Style du bouton spin au hover */
 #spin-wheel:hover {
     background-color: #d4d4d4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-
+/* Styles pour le texte de résultat */
 #result {
     margin-top: 20px;
     font-size: 2em;
@@ -1009,86 +995,100 @@ header ul li a {
     justify-content: center;
 }
 
-/* ----------- Modale ----------- */
-
+/* Styles pour la fenêtre modale */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
+    display: none; /* Cache la modale par défaut */
+    position: fixed; /* Position fixe pour que la modale reste toujours visible */
+    z-index: 1000; /* Priorité au dessus des autres éléments */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto; /* Afficher la scroll barre si besoin*/
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+     padding: 20px; /* Espacement sur les bords du modal */
 }
 
+/* Styles pour le contenu de la modale */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
+    position: relative;
+    background-color: white;
+    margin: auto;
     padding: 20px;
     border: 1px solid #888;
+     border-radius: 20px;
     width: 80%;
-    max-width: 400px;
-    text-align: center;
-    border-radius: 20px;
+    max-width: 400px; /* Largeur maximale de la modale */
+    text-align: center; /* Centre le texte de la modale */
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.modal-content img {
-    max-width: 250px;
-    border-radius: 20px;
-}
-
+/* Styles pour le bouton fermer de la modale */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
     font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+    color: #888;
     cursor: pointer;
 }
-
+.close:hover {
+    color: #8b0000;
+}
+/* Styles pour le conteneur des images */
+.image-container {
+     display: flex;
+    align-items: center;
+     margin-bottom: 20px;
+     position: relative;
+}
+/* Styles pour l'image de la modal */
+#modalImage {
+    max-width: 250px;
+    border-radius: 10px;
+    max-height: 300px;
+    object-fit: cover;
+     margin-bottom: 20px;
+}
+ /* Styles pour le nom dans la modal */
+#modalName {
+  margin-bottom: 15px;
+    color: #FD9BC2;
+}
+/* styles pour les conteneurs des boutons */
 .button-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+    gap: 15px;
 }
-
-.button-container button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
+ /* Style des boutons like dislike*/
+.swipe-button {
+    z-index: 1;
+    background-color: white;
     cursor: pointer;
+    font-size: 40px;
+}
+/* Style des icones like et dislike */
+.like-button i {
+    color: #11FF37;
+    transition: all 0.3s ease;
+}
+.dislike-button i {
+   color: #ff0000;
+    transition: all 0.3s ease;
+}
+.like-button i:hover {
+    color: #008000;
+}
+.dislike-button i:hover {
+    color: #8b0000;
 }
 
-#matchBtn {
-    background-color: #4CAF50;
-    color: white;
-}
-
-#unmatchBtn {
-    background-color: #f44336;
-    color: white;
-}
-
-/* ----------- Effets visuels ----------- */
-
-.modal-green {
-    background-color: rgba(0, 128, 0, 0.7) !important;
-    transition: background-color 0.5s ease;
-}
-
-.modal-red {
-    background-color: rgba(255, 0, 0, 0.7) !important;
-    transition: background-color 0.5s ease;
-}
-
+/* Style pour les confettis */
 .confetti {
     position: fixed;
     left: 0;
@@ -1096,7 +1096,7 @@ header ul li a {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .confetti-piece {
@@ -1120,20 +1120,6 @@ header ul li a {
     100% {
         transform: translateY(95vh) rotate(360deg);
         opacity: 0;
-    }
-}
-
-/* ----------- Media queries ----------- */
-
-@media (max-width: 425px) {
-    .wheel-container {
-        width: 90vw;
-        height: 90vw;
-    }
-
-    #spin-wheel {
-        width: 80%;
-        font-size: 1.2em;
     }
 }
 
@@ -1226,67 +1212,4 @@ footer .container {
 
 footer .container .social a i:hover {
     color: #FD9BC2;
-}
-
-/*Responsive*/
-/*Page d'accueil*/
-@media (max-width: 1100px) {
-    .hero .container-presentation .profil {
-        position: relative;
-        height: 60%;
-
-
-    }
-
-    .hero .container-presentation {
-        height: 100%;
-    }
-
-    .hero .container-presentation .profil img {
-        height: 100%;
-    }
-
-}
-
-@media (max-width: 425px) {
-    #canvas {
-        width: 90vw;
-        height: 90vw;
-    }
-
-    #spin-wheel {
-        width: 80%;
-        font-size: 1.2em;
-    }
-}
-
-/*Messagerie*/
-@media (max-width: 768px) {
-    .profile-card {
-        width: 90%;
-    }
-
-    .message-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .match-list-container {
-        width: 95%;
-        max-width: none;
-    }
-
-    .chat-window {
-        width: 95%;
-        height: 95%;
-    }
-
-    .contact-container {
-        width: 95%;
-    }
-
-    .form-group {
-        width: 90%;
-    }
 }
